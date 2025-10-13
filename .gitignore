@@ -1,0 +1,16 @@
+# Hugo build output
+/public/
+resources/_gen/
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Node / Go caches (if ever used)
+node_modules/
+*.log
+
+# Hugo cache
+hugo_stats.json
