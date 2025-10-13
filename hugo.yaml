@@ -1,0 +1,71 @@
+baseURL: "https://pporeddy.com/"
+title: "Prithvi Poreddy"
+pagination:
+  pagerSize: 5
+theme: ["PaperMod"]
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # enables Fuse.js-based search (out of the box)
+
+params:
+  env: production
+  title: "Prithvi Poreddy"
+  description: "Identtiy Security | Product Leader | Identity & Access Management | AI Security Strategy"
+  author: "Prithvi Poreddy"
+  defaultTheme: auto # auto switches between light/dark based on system
+  ShowReadingTime: true
+  ShowBreadCrumbs: true
+  ShowPostNavLinks: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  UseHugoToc: true
+  comments: false
+
+  # Home Info section (like PaperMod demo)
+  homeInfoParams:
+    Title: "Hi there 👋"
+    Content: >
+      Welcome to my website!
+      Built with Hugo & PaperMod — clean, fast, and minimal.
+
+  # Social Icons (show below intro)
+  socialIcons:
+    - name: github
+      url: "https://github.com/prithvikrishnab4u"
+    - name: linkedin
+      url: "https://linkedin.com/in/pporeddy"
+
+menu:
+  main:
+    - identifier: posts
+      name: "Posts"
+      url: "/posts/"
+      weight: 10
+    - identifier: tags
+      name: "Tags"
+      url: "/tags/"
+      weight: 20
+    - identifier: archives
+      name: "Archive"
+      url: "/archives/"
+      weight: 30
+    - identifier: search
+      name: "Search"
+      url: "/search/"
+      weight: 40
+
+taxonomies:
+  category: "categories"
+  tag: "tags"
+
+minify:
+  disableXML: true
+  minifyOutput: true
