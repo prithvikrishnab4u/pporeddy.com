@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Prithvi Poreddy</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Prithvi Poreddy</description>
+    <generator>Hugo -- 0.151.0</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 13 Oct 2025 12:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello Hugo PaperMod</title>
+      <link>http://localhost:1313/posts/first-post/</link>
+      <pubDate>Mon, 13 Oct 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/first-post/</guid>
+      <description>&lt;p&gt;Welcome to your first post!
+If you can read this, your PaperMod site is working perfectly 🎉&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
