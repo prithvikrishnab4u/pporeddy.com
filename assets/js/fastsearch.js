@@ -79,17 +79,50 @@ sInput.onkeyup = function (e) {
     if (fuse) {
         let results;
         if (params.fuseOpts) {
-            results = fuse.search(this.value.trim(), {limit: params.fuseOpts.limit}); // the actual query being run using fuse.js along with options
+            results = fuse.search(this.value.trim(), { limit: params.fuseOpts.limit }); // the actual query being run using fuse.js along with options
         } else {
             results = fuse.search(this.value.trim()); // the actual query being run using fuse.js
         }
-        if (results.length !== 0) {
-            // build our html if result exists
-            let resultSet = ''; // our results bucket
 
-            for (let item in results) {
-                resultSet += `<li class="post-entry"><header class="entry-header">${results[item].item.title}&nbsp;»</header>` +
-                    `<a href="${results[item].item.permalink}" aria-label="${results[item].item.title}"></a></li>`
+
+        if (results.length !== 0) {
+            // Track unique results by permalink
+            const seen = new Set();
+            let resultSet = "";
+
+            for (let i = 0; i < results.length; i++) {
+                const post = results[i].item;
+
+                // Skip duplicates
+                if (seen.has(post.permalink)) continue;
+                seen.add(post.permalink);
+
+                // Extract data
+                const title = post.title || "Untitled";
+                const permalink = post.permalink;
+                const content = post.summary || post.content || "";
+                const query = this.value.trim();
+
+                // Find one sentence with the match
+                let snippet = "";
+                if (query.length > 1) {
+                    const regex = new RegExp(`([^.!?]*\\b${query}\\b[^.!?]*[.!?])`, "i");
+                    const match = content.match(regex);
+                    snippet = match ? match[0].trim() : content.substring(0, 160) + "...";
+
+                    // Highlight matches
+                    const highlight = new RegExp(`(${query})`, "gi");
+                    snippet = snippet.replace(highlight, "<mark>$1</mark>");
+                } else {
+                    snippet = content.substring(0, 160) + "...";
+                }
+
+                // Build HTML
+                resultSet += `
+      <li class="post-entry search-result">
+        <a href="${permalink}" class="result-title">${title}</a>
+        <p class="result-snippet">${snippet}</p>
+      </li>`;
             }
 
             resList.innerHTML = resultSet;

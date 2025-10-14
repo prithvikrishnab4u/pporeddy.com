@@ -7,8 +7,6 @@ draft: false
 featured: false
 ---
 
-# Access Reviews Are Broken. How to Fix Them.
-
 Access reviews weren't meant to be painful, tedious, or something people dread seeing in their inbox.
 
 The idea was simple: periodically check who has access to what, and confirm whether they still need it. Remove what's no longer necessary. Reduce risk. Keep auditors happy.
