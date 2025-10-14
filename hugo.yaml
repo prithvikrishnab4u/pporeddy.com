@@ -22,19 +22,28 @@ params:
   author: "Prithvi Poreddy"
   defaultTheme: auto # auto switches between light/dark based on system
   ShowReadingTime: true
-  ShowBreadCrumbs: true
+  ShowBreadCrumbs: false
   ShowPostNavLinks: true
+  copyright: "© 2025 Prithvi Poreddy"
   ShowCodeCopyButtons: true
   ShowWordCount: true
   UseHugoToc: true
   comments: false
+  assets:
+    disableHLJS: false # Keep syntax highlighting on
+    disableFingerprinting: true
+  customJS: # 👇 Enable Mermaid diagrams
+    - "js/mermaid.min.js"
+  label: #image next to name on home page
+    text: "Prithvi Poreddy"
+    icon: "https://media.licdn.com/dms/image/v2/D5603AQEwOYH-OnQQyA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1710936028407?e=1763596800&v=beta&t=Faeq9qTBkI8WgINnvBvUE3ctsapxkM0BO_aziBqhYxI" # path to your logo
+    iconHeight: 32 # size in pixels
 
   # Home Info section (like PaperMod demo)
   homeInfoParams:
-    Title: "Hi there 👋"
+    Title: "Prithvi Poreddy"
     Content: >
-      Welcome to my website!
-      Built with Hugo & PaperMod — clean, fast, and minimal.
+      Product leader in Identity Security & AI Governance, building trustworthy systems for humans & machines while sharing insights on technology, risk, and design.
 
   # Social Icons (show below intro)
   socialIcons:
@@ -42,9 +51,15 @@ params:
       url: "https://github.com/prithvikrishnab4u"
     - name: linkedin
       url: "https://linkedin.com/in/pporeddy"
+    - name: instagram
+      url: "https://instagram.com/prithvikrishnab4u"
 
 menu:
   main:
+    - identifier: about
+      name: "About"
+      url: "/about/"
+      weight: 1
     - identifier: posts
       name: "Posts"
       url: "/posts/"
@@ -69,3 +84,8 @@ taxonomies:
 minify:
   disableXML: true
   minifyOutput: true
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

@@ -1,8 +1,7 @@
 ---
 title: "UTCP, MCP, and the Missing Identity Layer"
 description: "Why both UTCP and MCP overlook the hardest part of AI infrastructure—identity and trust."
-pubDatetime: 2025-10-10
-updatedDatetime: 2025-10-10
+date: 2025-10-10
 tags: ["UTCP", "MCP", "AI Agents", "Governance", "IAM", "Cybersecurity", "AI"]
 draft: false
 featured: false

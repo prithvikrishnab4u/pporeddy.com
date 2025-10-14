@@ -1,8 +1,7 @@
 ---
 title: "Access Reviews Are Broken: How to Fix Them"
 description: "Why access reviews fail in practice, how human behavior contributes, and how to redesign them for real governance instead of compliance checkboxes."
-pubDatetime: 2025-10-11
-updatedDatetime: 2025-10-11
+date: 2025-10-11
 tags: ["identity", "governance", "security", "access reviews", "design"]
 draft: false
 featured: false

@@ -1,0 +1,92 @@
+<!-- ✅ Mermaid + working Image/Diagram Zoom -->
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+
+<div class="img-zoom-overlay" id="imgZoomOverlay">
+    <img id="zoomedImg" src="" alt="Zoomed image">
+</div>
+
+<style>
+    .img-zoom-overlay {
+        position: fixed;
+        inset: 0;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        cursor: zoom-out;
+        background: rgba(0, 0, 0, 0.85);
+    }
+
+    .img-zoom-overlay img {
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 8px;
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.45);
+    }
+</style>
+
+<script>
+    function renderMermaid() {
+        const codeBlocks = document.querySelectorAll("code.language-mermaid");
+        codeBlocks.forEach(block => {
+            const pre = block.parentNode;
+            const wrapper = document.createElement("div");
+            wrapper.classList.add("mermaid");
+            wrapper.innerHTML = block.textContent;
+            pre.parentNode.replaceChild(wrapper, pre);
+        });
+
+        if (window.mermaid) {
+            const theme =
+                (localStorage.getItem("pref-theme") === "dark" ||
+                    (!localStorage.getItem("pref-theme") &&
+                        window.matchMedia("(prefers-color-scheme: dark)").matches))
+                    ? "dark"
+                    : "default";
+            mermaid.initialize({ startOnLoad: false, theme });
+            mermaid.run();
+        }
+    }
+
+    function enableZoom() {
+        const overlay = document.getElementById("imgZoomOverlay");
+        const zoomedImg = document.getElementById("zoomedImg");
+
+        function show(src) {
+            zoomedImg.src = src;
+            overlay.style.display = "flex";
+        }
+        function hide() {
+            overlay.style.display = "none";
+            zoomedImg.src = "";
+        }
+
+        // ✅ Delay ensures PaperMod DOM is ready
+        setTimeout(() => {
+            document
+                .querySelectorAll(".post-content img, article img, .mermaid svg")
+                .forEach(el => {
+                    el.style.cursor = "zoom-in";
+                    el.addEventListener("click", () => {
+                        if (el.tagName.toLowerCase() === "svg") {
+                            const svgData = new XMLSerializer().serializeToString(el);
+                            const blob = new Blob([svgData], { type: "image/svg+xml" });
+                            show(URL.createObjectURL(blob));
+                        } else {
+                            show(el.src);
+                        }
+                    });
+                });
+        }, 800); // wait for render
+
+        overlay.addEventListener("click", hide);
+        document.addEventListener("keydown", e => {
+            if (e.key === "Escape") hide();
+        });
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        renderMermaid();
+        enableZoom();
+    });
+</script>
