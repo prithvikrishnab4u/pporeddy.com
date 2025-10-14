@@ -29,6 +29,7 @@ params:
   ShowWordCount: true
   UseHugoToc: true
   comments: false
+  hideFooter: true
   assets:
     disableHLJS: false # Keep syntax highlighting on
     disableFingerprinting: true
