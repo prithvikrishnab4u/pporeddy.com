@@ -1,64 +1,63 @@
-/* === Final PaperMod-style Search Results === */
+/* === Modern Polished Search Results === */
 
 #searchResults {
     list-style: none;
     padding: 0;
-    margin-top: 1.5rem;
+    margin-top: 1.8rem;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.25rem;
 }
 
-/* Card look for each result */
-#searchResults li {
+/* Search result card */
+.search-result {
     background: var(--entry);
     border-radius: var(--radius);
-    padding: 1rem 1.25rem;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
-    transition: all 0.15s ease;
-    overflow: hidden;
     border: 1px solid var(--border);
+    padding: 1.2rem 1.6rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: all 0.15s ease;
+    line-height: 1.6;
 }
 
-#searchResults li:hover {
-    transform: translateY(-3px);
+.search-result:hover {
+    transform: translateY(-2px);
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
 }
 
-/* Title link */
-#searchResults .result-title {
+/* Title */
+.result-title {
+    display: block;
+    font-weight: 700;
     font-size: 1.05rem;
-    font-weight: 600;
     color: var(--primary);
     text-decoration: none;
-    display: block;
-    margin-bottom: 0.35rem;
-    line-height: 1.4;
+    margin-bottom: 0.55rem;
+    line-height: 1.45;
 }
 
-#searchResults .result-title:hover {
+.result-title:hover {
     color: var(--link-hover);
 }
 
-/* Snippet text */
-#searchResults .result-snippet {
-    font-size: 0.95rem;
+/* Snippet */
+.result-snippet {
+    font-size: 0.96rem;
     color: var(--secondary);
-    line-height: 1.55;
-    margin: 0;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    /* show max 3 lines */
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    line-height: 1.65;
+    margin: 0.4rem 0 0;
+    /* consistent top spacing */
+    padding: 0;
+    /* no inner padding */
+    white-space: normal;
+    /* ensure wrapping */
 }
 
-/* Highlight color */
+/* Highlight */
 mark {
     background-color: #fff59d;
     color: inherit;
-    border-radius: 2px;
+    border-radius: 3px;
     padding: 0 2px;
 }
 
@@ -66,9 +65,57 @@ html[data-theme='dark'] mark {
     background-color: #665c00;
 }
 
-/* Smooth input focus shadow */
+/* Input field consistency */
+#searchInput {
+    border-radius: 8px;
+    padding: 0.65rem 0.9rem;
+    border: 1px solid var(--border);
+    font-size: 1rem;
+    transition: box-shadow 0.2s ease;
+}
+
 #searchInput:focus {
     outline: none;
     box-shadow: 0 0 0 2px var(--primary);
-    border-radius: 6px;
+}
+
+/* Small spacing between multiple paragraphs in snippet */
+.result-snippet p {
+    margin: 0.25rem 0 0 !important;
+    line-height: 1.6;
+}
+
+/* --- Fade-out effect for long snippets --- */
+
+.result-snippet {
+    position: relative;
+    overflow: hidden;
+}
+
+.result-snippet::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1.5em;
+    background: linear-gradient(to bottom, transparent, var(--entry));
+}
+
+/* Slightly softer highlight color */
+mark {
+    background-color: #fff4a3;
+    color: inherit;
+    border-radius: 2px;
+    padding: 0 2px;
+}
+
+html[data-theme='dark'] mark {
+    background-color: #857600;
+}
+
+/* Adjust spacing between cards */
+#searchResults {
+    margin-top: 1.2rem;
+    gap: 1rem;
 }

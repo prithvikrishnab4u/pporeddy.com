@@ -103,20 +103,36 @@ sInput.onkeyup = function (e) {
                 const content = post.summary || post.content || "";
                 const query = this.value.trim();
 
-                // Find one sentence with the match
+                // --- Smarter snippet extraction: show exact matching line or nearby sentences ---
                 let snippet = "";
-                if (query.length > 1) {
-                    const regex = new RegExp(`([^.!?]*\\b${query}\\b[^.!?]*[.!?])`, "i");
-                    const match = content.match(regex);
-                    snippet = match ? match[0].trim() : content.substring(0, 160) + "...";
+                if (query.length > 1 && content) {
+                    // Split into lines or sentences to catch keyword context
+                    const parts = content.split(/[\n.!?]/);
+                    const found = parts.find(p => new RegExp(`\\b${query}\\b`, "i").test(p.trim()));
 
-                    // Highlight matches
+                    if (found) {
+                        // Include a little context before and after if available
+                        const idx = parts.indexOf(found);
+                        const start = Math.max(0, idx - 1);
+                        const end = Math.min(parts.length, idx + 2);
+                        snippet = parts.slice(start, end).join(". ").trim() + " ...";
+                    } else {
+                        snippet = content.substring(0, 180) + " ...";
+                    }
+
+                    // Highlight query
                     const highlight = new RegExp(`(${query})`, "gi");
                     snippet = snippet.replace(highlight, "<mark>$1</mark>");
+                    // Clean excessive newlines and multiple spaces
+                    snippet = snippet.replace(/\n+/g, " ");   // remove line breaks
+                    snippet = snippet.replace(/\s{2,}/g, " "); // collapse extra spaces
                 } else {
-                    snippet = content.substring(0, 160) + "...";
+                    snippet = content.substring(0, 180) + " ...";
                 }
 
+                if (snippet.length > 300) {
+                    snippet = snippet.substring(0, 300) + " ...";
+                }
                 // Build HTML
                 resultSet += `
       <li class="post-entry search-result">

@@ -21,7 +21,7 @@ cover:
 
 👋 Hi, I’m **Prithvi Poreddy** — a Product Leader specializing in **Identity Security, IAM, and AI-driven Governance**.
 
-Currently, I work at the intersection of **Identity, Risk, and Intelligent Automation**, helping enterprises secure access at scale.
+Currently, I work at the intersection of **Identity, Risk, and Intelligent Automation**, helping enterprises build secure and scalable identity foundations.
 
 ---
 
@@ -41,7 +41,7 @@ When I’m not deep in security design, you’ll find me playing pickleball, wri
 ---
 
 ### Current Focus
-My recent work explores **AI-driven identity governance**, designing frameworks for **autonomous agent identities**, and aligning human + machine access models.
+My current focus is **AI-driven identity governance**, designing frameworks for **autonomous agent identities**, and aligning human + machine access models.
 
 I believe the next era of IAM will merge **posture management**, **visibility intelligence**, and **adaptive access** — built on transparent, explainable AI systems.
 
