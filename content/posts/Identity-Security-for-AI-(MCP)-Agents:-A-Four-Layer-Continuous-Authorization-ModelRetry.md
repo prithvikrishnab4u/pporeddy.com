@@ -1,5 +1,5 @@
 ---
-title: "Identity Security for AI (MCP) Agents"
+title: "Identity Security for AI (MCP) Agents: A Four-Layer Continuous Authorization Model"
 description: "Exploring how MCP agents require continuous authorization across four layers to achieve real identity security."
 summary: "A detailed look at how AI agents built on MCP need continuous, layered authorization to achieve true identity trust."
 date: 2025-09-06T00:00:00Z
