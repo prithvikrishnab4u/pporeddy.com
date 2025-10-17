@@ -1,10 +1,28 @@
 ---
 title: "Access Reviews Are Broken: How to Fix Them"
-description: "Why access reviews fail in practice, how human behavior contributes, and how to redesign them for real governance instead of compliance checkboxes."
-date: 2025-10-11
-tags: ["identity", "governance", "security", "access reviews", "design"]
+description: Why access reviews fail in practice, how human behavior contributes, and how to redesign them for real governance instead of compliance checkboxes.
+summary: A practical guide to redesigning access reviews that actually reduce risk by aligning with how people think and work, not just compliance checkboxes.
+date: 2025-10-11T00:00:00Z
+lastmod: 2025-10-11T00:00:00Z
+author: Prithvi Poreddy
+tags:
+  - IAM
+  - Governance
+  - AccessReviews
+  - Security
+  - UserExperience
+  - Compliance
+categories:
+  - Identity Governance
+  - Security Design
 draft: false
 featured: false
+ShowReadingTime: true
+ShowShareButtons: true
+canonicalURL: https://www.linkedin.com/pulse/access-reviews-broken-how-fix-them-prithvi-poreddy-tm0ac/
+slug: access-reviews-broken-how-to-fix
+og_type: article
+robots: index, follow
 ---
 
 Access reviews weren't meant to be painful, tedious, or something people dread seeing in their inbox.
@@ -96,7 +114,7 @@ The more context you provide, the more likely people are to act.
 
 ### Start with Self-Review
 
-Instead of asking managers to approve everything, start by asking users: “Do you still need this access?”
+Instead of asking managers to approve everything, start by asking users: "Do you still need this access?"
 
 People are far more accurate when reviewing their own access — and it builds accountability.
 
@@ -109,14 +127,14 @@ People are far more accurate when reviewing their own access — and it builds a
 Why review quarterly if nothing changed?
 
 Trigger reviews when a person changes departments, finishes a project, or hasn't used an access in 100 days.
-That’s when reviews are most likely to catch real issues — not three months after the fact.
+That's when reviews are most likely to catch real issues — not three months after the fact.
 
 ---
 
 ### Reframe the Deadline
 
-“Due in 28 days” feels like something to push off.
-“Please review **now**” often works better — especially when the task is short and focused.
+"Due in 28 days" feels like something to push off.
+"Please review **now**" often works better — especially when the task is short and focused.
 
 When something feels urgent and manageable, it gets done.
 
@@ -124,15 +142,15 @@ When something feels urgent and manageable, it gets done.
 
 ### Make Risk Visible — and Reversal Safe
 
-One reason people over-approve is fear: “What if I remove this and something breaks?”
+One reason people over-approve is fear: "What if I remove this and something breaks?"
 
 You can ease that fear by:
 
 - Showing **last use**
 - Flagging **safe-to-remove** entitlements
-- Offering **temporary removal** or “flag for follow-up” options
+- Offering **temporary removal** or "flag for follow-up" options
 
-It’s not just about giving people data — it’s about giving them confidence.
+It's not just about giving people data — it's about giving them confidence.
 
 ---
 
@@ -141,7 +159,7 @@ It’s not just about giving people data — it’s about giving them confidence
 Ever open a giant review and wonder if you'll ever finish it?
 
 People are more likely to complete a task when they see progress.
-Add visual indicators: “6 of 8 critical items reviewed,” or “Only 2 high-risk entitlements left.”
+Add visual indicators: "6 of 8 critical items reviewed," or "Only 2 high-risk entitlements left."
 
 Break up large reviews into manageable chunks.
 Show how much is left. Celebrate clean completions.
@@ -151,7 +169,7 @@ Show how much is left. Celebrate clean completions.
 ## Measuring Success: Is This Actually Working?
 
 But how do we know if these changes actually work?
-Review completion alone isn’t enough. We need better signals.
+Review completion alone isn't enough. We need better signals.
 
 ### What to Measure
 
@@ -199,11 +217,11 @@ Focus human effort where it actually reduces risk. Let automation handle the res
 
 ## Final Thought: Governance Isn't a Checkbox
 
-Access reviews don’t have to be a compliance checkbox.
+Access reviews don't have to be a compliance checkbox.
 
-When they’re well-designed with context, timing, and focus, they can actually reduce risk, improve accountability, and build trust in the access model.
+When they're well-designed with context, timing, and focus, they can actually reduce risk, improve accountability, and build trust in the access model.
 
 But for that to happen, we have to stop designing reviews around audit checklists alone and start designing them around how people actually work.
 
-Because the right design doesn’t just make reviews easier.
+Because the right design doesn't just make reviews easier.
 It makes them meaningful.
