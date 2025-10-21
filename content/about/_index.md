@@ -26,7 +26,7 @@ Currently, I work at the intersection of **Identity, Risk, and Intelligent Autom
 ---
 
 ### Focus Areas
-- Identity Security (IAM, PAM, IGA, PAM, ISPM, ITDR, IVIP)
+- Identity Security (IAM, IGA, PAM)
 - Non Human Identity & Agentic AI Governance
 - Trust and Safety
 - Product Strategy & Technical Architecture
@@ -43,6 +43,6 @@ When I’m not deep in security design, you’ll find me playing pickleball, wri
 ### Current Focus
 My current focus is **AI-driven identity governance**, designing frameworks for **autonomous agent identities**, and aligning human + machine access models.
 
-I believe the next era of IAM will merge **posture management**, **visibility intelligence**, and **adaptive access** — built on transparent, explainable AI systems.
+I believe the next era of IAM will merge **posture management**, **visibility intelligence**, and **adaptive access** built on transparent, explainable AI systems.
 
 ---
