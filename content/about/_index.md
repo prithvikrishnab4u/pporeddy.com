@@ -3,14 +3,14 @@ title: "About"
 showToc: false
 draft: false
 cover:
-  image: "https://media.licdn.com/dms/image/v2/D5603AQEwOYH-OnQQyA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1710936028407?e=1763596800&v=beta&t=Faeq9qTBkI8WgINnvBvUE3ctsapxkM0BO_aziBqhYxI"
+  image: "https://media.licdn.com/dms/image/v2/D4D03AQEE0xPH5lGQkw/profile-displayphoto-scale_200_200/B4DZpX5Y57JEAk-/0/1762411254005?e=1764201600&v=beta&t=RrFhugCenNUuAb1LawUGvUqiG-egdrxmECFctbbG6Dk"
   alt: "Prithvi Poreddy"
   caption: "Prithvi Poreddy"
 ---
 
 <div align="center">
 
-<img src="https://media.licdn.com/dms/image/v2/D5603AQEwOYH-OnQQyA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1710936028407?e=1763596800&v=beta&t=Faeq9qTBkI8WgINnvBvUE3ctsapxkM0BO_aziBqhYxI"
+<img src="https://media.licdn.com/dms/image/v2/D4D03AQEE0xPH5lGQkw/profile-displayphoto-scale_200_200/B4DZpX5Y57JEAk-/0/1762411254005?e=1764201600&v=beta&t=RrFhugCenNUuAb1LawUGvUqiG-egdrxmECFctbbG6Dk"
      alt="Prithvi Poreddy"
      width="150"
      height="150"
