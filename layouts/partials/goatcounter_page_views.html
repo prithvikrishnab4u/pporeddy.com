@@ -1,22 +1,16 @@
-{{ if not .IsHome }}
 {{ $goatcounterUrl := printf "https://pporeddy.goatcounter.com/counter/%s.json" (.Permalink | urlquery) }}
 <span class="goatcounter-views">
-    <span class="dot">|</span>
     <script>
         var r = new XMLHttpRequest();
         r.addEventListener('load', function () {
             var data = JSON.parse(this.responseText);
             if (data && data.count_unique) {
                 // Display the unique visitor count
-                document.getElementById('gc-{{ .File.UniqueID }}').innerText = data.count_unique;
-            } else {
-                // Hide the pipe separator if no count is returned
-                document.getElementById('gc-{{ .File.UniqueID }}').previousElementSibling.style.display = 'none';
+                document.getElementById('gc-{{ .File.UniqueID }}').innerText = data.count_unique + ' views';
             }
         })
         r.open('GET', '{{ $goatcounterUrl }}')
         r.send()
     </script>
-    <span id="gc-{{ .File.UniqueID }}" title="Page views" style="margin-left: 5px;">0</span> views
+    <span id="gc-{{ .File.UniqueID }}" title="Page views"></span>
 </span>
-{{ end }}
