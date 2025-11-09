@@ -1,10 +1,11 @@
 {{ $goatcounterUrl := printf "https://pporeddy.goatcounter.com/counter/%s.json" (.RelPermalink | urlquery) }}
 
-{{ $historic := default 0 .Params.historic_views }}
+{{/* Hugo passes the numeric value as a string, so we must define it here: */}}
+{{ $historic := default 134 .Params.historic_views }}
 
 <span class="goatcounter-views">
     <script>
-        // Define the historic count from Hugo's front matter
+        // 1. Get the historic count and ensure it is parsed as a number.
         var historicViews = parseInt({{ $historic }});
 
         var r = new XMLHttpRequest();
@@ -12,9 +13,10 @@
             var data = JSON.parse(this.responseText);
             var totalViews = historicViews;
 
-            // Add the live unique count to the historic count
+            // 2. Get the live unique count and ensure it is parsed as a number.
             if (data && data.count_unique) {
-                totalViews += data.count_unique;
+                // The crucial fix is wrapping data.count_unique with parseInt()
+                totalViews += parseInt(data.count_unique);
             }
 
             // Display the final calculated total
