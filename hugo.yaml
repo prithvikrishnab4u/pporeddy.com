@@ -37,17 +37,14 @@ params:
     - "js/mermaid.min.js"
   label: #image next to name on home page
     text: "Prithvi Poreddy"
-    icon: "https://media.licdn.com/dms/image/v2/D5603AQEwOYH-OnQQyA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1710936028407?e=1763596800&v=beta&t=Faeq9qTBkI8WgINnvBvUE3ctsapxkM0BO_aziBqhYxI" # path to your logo
+    icon: "/images/my-profile-pic.jpg" # path to your logo
     iconHeight: 32 # size in pixels
 
-  images:
-    [
-      "https://media.licdn.com/dms/image/v2/D5603AQEwOYH-OnQQyA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1710936028407?e=1763596800&v=beta&t=Faeq9qTBkI8WgINnvBvUE3ctsapxkM0BO_aziBqhYxI",
-    ]
+  images: ["/my-profile-pic.jpg"]
 
   openGraph:
     type: website
-    image: "https://media.licdn.com/dms/image/v2/D5603AQEwOYH-OnQQyA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1710936028407?e=1763596800&v=beta&t=Faeq9qTBkI8WgINnvBvUE3ctsapxkM0BO_aziBqhYxI"
+    image: "/static/images/my-profile-pic.jpg"
     title: "Prithvi Poreddy — Identity Security & AI Governance"
     description: "Product leader building trustworthy systems for humans and machines."
 
