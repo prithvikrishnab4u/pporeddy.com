@@ -33,9 +33,11 @@ Second, and more concerning: in your provisioned SaaS applications, the new empl
 
 These aren't edge cases. They're predictable outcomes of treating email addresses as recyclable identifiers. This scenario reveals three broader problems that emerge from poor identifier strategy.
 
-Predictable usernames like jsmith, jsmith1, jsmith2 enable account enumeration. Attackers discover valid accounts without triggering alerts, making credential stuffing and targeted phishing trivial. When Jane Doe marries and becomes Jane Smith, what should be a simple attribute update becomes a three-week project touching forty systems.
+Predictable usernames like jsmith, jsmith1, jsmith2 enable account enumeration. Attackers discover valid accounts without triggering alerts, making credential stuffing and targeted phishing trivial.
 
-Technical debt compounds with every name change. Consider the compliance impact: your auditor asks you to prove terminated employees lose all access within 24 hours. You show IdP deactivation timestamps but can't explain why logs show a terminated employee accessing data because it's the reused email from eighteen months ago.
+When Jane Doe marries and becomes Jane Smith, what should be a simple attribute update becomes a three-week project touching forty systems. Technical debt compounds with every name change.
+
+Consider the compliance impact: your auditor asks you to prove terminated employees lose all access within 24 hours. You show IdP deactivation timestamps but can't explain why logs show a terminated employee accessing data because it's the reused email from eighteen months ago.
 
 ## What Changed
 
@@ -127,7 +129,7 @@ A mixed environment is manageable if you have canonical mapping and new identiti
 
 The organizations that succeed aren't the ones with pristine systems. They're the ones that acknowledge the mess, create a path forward, and execute consistently over time.
 
-In the next article, we'll tackle the practical reality that complicates this model: most SaaS platforms insist on using email addresses as identifiers, and you can't change that.
+In the next article, I'll tackle the practical reality that complicates this model: most SaaS platforms insist on using email addresses as identifiers, and you can't change that.
 
 ***
 
