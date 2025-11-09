@@ -3,14 +3,14 @@ title: "About"
 showToc: false
 draft: false
 cover:
-  image: "/static/images/main-logo.jpg"
+  image: "/images/my-profile-pic.jpg"
   alt: "Prithvi Poreddy"
   caption: "Prithvi Poreddy"
 ---
 
 <div align="center">
 
-<img src="/static/images/main-logo.jpg"
+<img src="/images/my-profile-pic.jpg"
      alt="Prithvi Poreddy"
      width="150"
      height="150"

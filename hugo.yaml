@@ -37,7 +37,7 @@ params:
     - "js/mermaid.min.js"
   label: #image next to name on home page
     text: "Prithvi Poreddy"
-    icon: "/images/my-profile-pic.jpg" # path to your logo
+    icon: "/images/bw-icon.jpg" # path to your logo
     iconHeight: 32 # size in pixels
 
   images: ["/my-profile-pic.jpg"]
