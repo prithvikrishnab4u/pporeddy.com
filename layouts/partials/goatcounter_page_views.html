@@ -1,29 +1,22 @@
-{{/* HTML to display the count */}}
-<span class="page-view-counter">
-    <span id="page-views-{{ .File.UniqueID }}">...</span> views
+{{ if not .IsHome }}
+{{ $goatcounterUrl := printf "https://pporeddy.goatcounter.com/counter/%s.json" (.Permalink | urlquery) }}
+<span class="goatcounter-views">
+    <span class="dot">|</span>
+    <script>
+        var r = new XMLHttpRequest();
+        r.addEventListener('load', function () {
+            var data = JSON.parse(this.responseText);
+            if (data && data.count_unique) {
+                // Display the unique visitor count
+                document.getElementById('gc-{{ .File.UniqueID }}').innerText = data.count_unique;
+            } else {
+                // Hide the pipe separator if no count is returned
+                document.getElementById('gc-{{ .File.UniqueID }}').previousElementSibling.style.display = 'none';
+            }
+        })
+        r.open('GET', '{{ $goatcounterUrl }}')
+        r.send()
+    </script>
+    <span id="gc-{{ .File.UniqueID }}" title="Page views" style="margin-left: 5px;">0</span> views
 </span>
-
-<script>
-    var statsElementId = "page-views-{{ .File.UniqueID }}";
-    // Use .RelPermalink and remove trailing slash for path uniformity
-    var path = "{{ .RelPermalink | default .Permalink }}";
-    if (path.endsWith('/')) { path = path.slice(0, -1); }
-
-    var r = new XMLHttpRequest;
-
-    r.addEventListener("load", function () {
-        var stats = JSON.parse(this.responseText);
-
-        // Only display if the unique count is greater than zero
-        if (stats && stats.count_unique > 0) {
-            document.getElementById(statsElementId).innerText = stats.count_unique.toLocaleString();
-        } else {
-            // Hide the counter if no data is found or the count is 0
-            document.querySelector(".page-view-counter").style.display = "none";
-        }
-    });
-
-    // CRITICAL: Request the JSON data endpoint
-    r.open("GET", "https://pporeddy.goatcounter.com/counter/" + encodeURIComponent(path) + ".json");
-    r.send();
-</script>
+{{ end }}
