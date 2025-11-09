@@ -1,7 +1,10 @@
 ---
 title: "Making Sense of Identity's Alphabet Soup: ISPM, IVIP, and ITDR"
-description: Exploring how ISPM, IVIP, and ITDR form the modern defense layer of identity security built on IAM and governance systems.
-summary: A comprehensive guide to understanding how ISPM, IVIP, and ITDR work together to provide posture, visibility, and response for complete identity defense.
+description: Exploring how ISPM, IVIP, and ITDR form the modern defense layer of
+  identity security built on IAM and governance systems.
+summary: A comprehensive guide to understanding how ISPM, IVIP, and ITDR work
+  together to provide posture, visibility, and response for complete identity
+  defense.
 date: 2025-10-08T00:00:00Z
 lastmod: 2025-10-08T00:00:00Z
 author: Prithvi Poreddy
@@ -26,6 +29,7 @@ canonicalURL: https://www.linkedin.com/pulse/making-sense-identitys-alphabet-sou
 slug: identity-alphabet-soup-ispm-ivip-itdr
 og_type: article
 robots: index, follow
+historic_views: 973
 ---
 
 

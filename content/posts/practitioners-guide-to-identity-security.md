@@ -1,12 +1,26 @@
 ---
 title: "A Practitioner's Guide to Identity Security: One Challenge, Many Paths"
-description: "A detailed practitioner’s guide to accelerating app onboarding and building consistent identity security across complex enterprise environments."
-summary: "This guide outlines practical strategies practitioners can use to reduce risk through rapid, consistent app onboarding — covering baselines, thin provisioning, prioritization, patterns, guardrails, and metrics."
+description: A detailed practitioner’s guide to accelerating app onboarding and
+  building consistent identity security across complex enterprise environments.
+summary: This guide outlines practical strategies practitioners can use to
+  reduce risk through rapid, consistent app onboarding — covering baselines,
+  thin provisioning, prioritization, patterns, guardrails, and metrics.
 date: 2025-09-11T00:00:00Z
 lastmod: 2025-10-17T00:00:00Z
-author: ["Prithvi Poreddy"]
-tags: ["IAM", "IGA", "Identity Security", "App Onboarding", "SSO", "SCIM", "Automation", "Cybersecurity"]
-categories: ["Identity Security", "App Onboarding"]
+author:
+  - Prithvi Poreddy
+tags:
+  - IAM
+  - IGA
+  - Identity Security
+  - App Onboarding
+  - SSO
+  - SCIM
+  - Automation
+  - Cybersecurity
+categories:
+  - Identity Security
+  - App Onboarding
 draft: false
 featured: false
 ShowReadingTime: true
@@ -17,10 +31,11 @@ ShowCodeCopyButtons: true
 ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
-canonicalURL: "https://www.linkedin.com/pulse/practitioners-guide-rapid-app-onboarding-one-many-paths-poreddy-vkxvc/"
+canonicalURL: https://www.linkedin.com/pulse/practitioners-guide-rapid-app-onboarding-one-many-paths-poreddy-vkxvc/
 slug: practitioners-guide-identity-security
 og_type: article
 robots: index, follow
+historic_views: 939
 ---
 
 # A Practitioner's Guide to Identity Security: One Challenge, Many Paths

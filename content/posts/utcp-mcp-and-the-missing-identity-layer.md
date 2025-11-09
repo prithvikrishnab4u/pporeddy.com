@@ -1,7 +1,9 @@
 ---
-title: "UTCP, MCP, and the Missing Identity Layer"
-description: Why both UTCP and MCP overlook the hardest part of AI infrastructure—identity and trust.
-summary: An analysis of how UTCP and MCP both fail to address the fundamental challenge of identity and trust for AI agents, and what's needed to fix it.
+title: UTCP, MCP, and the Missing Identity Layer
+description: Why both UTCP and MCP overlook the hardest part of AI
+  infrastructure—identity and trust.
+summary: An analysis of how UTCP and MCP both fail to address the fundamental
+  challenge of identity and trust for AI agents, and what's needed to fix it.
 date: 2025-10-10T00:00:00Z
 lastmod: 2025-10-10T00:00:00Z
 author: Prithvi Poreddy
@@ -26,6 +28,7 @@ canonicalURL: https://www.linkedin.com/pulse/utcp-mcp-missing-identity-layer-pri
 slug: utcp-mcp-missing-identity-layer
 og_type: article
 robots: index, follow
+historic_views: 908
 ---
 
 *Tool calling is easy. Trust isn't.*

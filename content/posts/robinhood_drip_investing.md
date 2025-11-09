@@ -1,7 +1,11 @@
 ---
-title: "Robinhood introduced DRIP, Recurring and Fractional investing. Everything you need to know."
-description: How Robinhood's DRIP, recurring investments, and fractional shares make investing accessible for everyone, with practical examples and strategies.
-summary: A practical guide to using DRIP investing, recurring deposits, and fractional shares to build wealth over time, even with small amounts.
+title: Robinhood introduced DRIP, Recurring and Fractional investing. Everything
+  you need to know.
+description: How Robinhood's DRIP, recurring investments, and fractional shares
+  make investing accessible for everyone, with practical examples and
+  strategies.
+summary: A practical guide to using DRIP investing, recurring deposits, and
+  fractional shares to build wealth over time, even with small amounts.
 date: 2024-10-27T00:00:00Z
 lastmod: 2024-10-27T00:00:00Z
 author: Prithvi Poreddy
@@ -24,10 +28,11 @@ slug: robinhood-drip-recurring-fractional-investing
 og_type: article
 robots: index, follow
 cover:
-  image: "images/robinhood-investing-cover.gif"
-  alt: "DRIP, Recurring and Fractional Investing"
-  caption: "Three powerful investing strategies for building wealth"
+  image: images/robinhood-investing-cover.gif
+  alt: DRIP, Recurring and Fractional Investing
+  caption: Three powerful investing strategies for building wealth
   relative: false
+historic_views: 822
 ---
 
 Robinhood started a revolution by providing commission free stock and ETF trading. In 6 years, Robinhood attracted over 10 million users to its trading platform. It provides crypto, options, stock, and ETF trading.

@@ -1,12 +1,25 @@
 ---
-title: "Stop Treating Email Addresses as Identifiers"
-description: "Why email addresses make poor system identifiers and how to build better identity architecture"
-summary: "Email addresses as identifiers create security risks, audit gaps, and technical debt. Learn the three-layer approach to proper identity management."
+title: Stop Treating Email Addresses as Identifiers
+description: Why email addresses make poor system identifiers and how to build
+  better identity architecture
+summary: Email addresses as identifiers create security risks, audit gaps, and
+  technical debt. Learn the three-layer approach to proper identity management.
 date: 2025-11-08T00:00:00Z
 lastmod: 2025-11-08T00:00:00Z
-author: ["Prithvi Poreddy"]
-tags: ["identity management", "IAM", "email addresses", "system identifiers", "immutable identifiers", "identity architecture", "authentication", "security"]
-categories: ["Identity Security", "IAM"]
+author:
+  - Prithvi Poreddy
+tags:
+  - identity management
+  - IAM
+  - email addresses
+  - system identifiers
+  - immutable identifiers
+  - identity architecture
+  - authentication
+  - security
+categories:
+  - Identity Security
+  - IAM
 draft: false
 featured: false
 ShowReadingTime: true
@@ -17,10 +30,11 @@ ShowCodeCopyButtons: true
 ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
-canonicalURL: "https://www.linkedin.com/pulse/stop-treating-email-addresses-identifiers-prithvi-poreddy-ytbnc/?trackingId=f8udmIVUqS6NuO2A71lOYw%3D%3D"
+canonicalURL: https://www.linkedin.com/pulse/stop-treating-email-addresses-identifiers-prithvi-poreddy-ytbnc/?trackingId=f8udmIVUqS6NuO2A71lOYw%3D%3D
 slug: stop-treating-email-addresses-as-identifiers
 og_type: article
 robots: index, follow
+historic_views: 951
 ---
 
 An employee leaves your company. Eighteen months later, their email address is reassigned to a new hire.
