@@ -1,7 +1,9 @@
 ---
 title: What Is an Identity? Defining Digital Principals in the Age of AI
-description: Defining what truly makes something an identity in the age of AI, from human to agent identities.
-summary: A foundational exploration of how data, credentials, and runtime transform into authenticatable digital identities.
+description: Defining what truly makes something an identity in the age of AI,
+  from human to agent identities.
+summary: A foundational exploration of how data, credentials, and runtime
+  transform into authenticatable digital identities.
 date: 2025-09-15T00:00:00Z
 lastmod: 2025-10-17T00:00:00Z
 author:
@@ -30,6 +32,7 @@ canonicalURL: https://www.linkedin.com/pulse/what-identity-defining-digital-prin
 slug: what-is-an-identity
 og_type: article
 robots: index, follow
+historic_views: 808
 ---
 
 > *I think therefore IAM*

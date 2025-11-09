@@ -1,12 +1,27 @@
 ---
 title: "Implementing CAEP: Architecture Patterns and Policy Design (Part 3 of 4)"
-description: "Four integration patterns, policy design frameworks, and deployment considerations for implementing continuous access evaluation in your environment."
-summary: "From direct IdP connections to centralized event hubs—understand the architecture patterns that work at scale, how to design effective policies, and avoid common implementation pitfalls."
+description: Four integration patterns, policy design frameworks, and deployment
+  considerations for implementing continuous access evaluation in your
+  environment.
+summary: From direct IdP connections to centralized event hubs—understand the
+  architecture patterns that work at scale, how to design effective policies,
+  and avoid common implementation pitfalls.
 date: 2025-10-28T00:00:00Z
 lastmod: 2025-11-07T00:00:00Z
-author: ["Prithvi Poreddy"]
-tags: ["CAEP", "Implementation", "Architecture Patterns", "Policy Design", "Event Hub", "API Gateway", "Webhooks", "Deployment"]
-categories: ["Identity Security", "Access Management"]
+author:
+  - Prithvi Poreddy
+tags:
+  - CAEP
+  - Implementation
+  - Architecture Patterns
+  - Policy Design
+  - Event Hub
+  - API Gateway
+  - Webhooks
+  - Deployment
+categories:
+  - Identity Security
+  - Access Management
 draft: false
 featured: false
 ShowReadingTime: true
@@ -17,10 +32,11 @@ ShowCodeCopyButtons: true
 ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
-canonicalURL: "https://www.linkedin.com/pulse/implementing-caep-architecture-patterns-policy-design-prithvi-poreddy-uzwic/"
+canonicalURL: https://www.linkedin.com/pulse/implementing-caep-architecture-patterns-policy-design-prithvi-poreddy-uzwic/
 slug: caep-explained-part-3
 og_type: article
 robots: index, follow
+historic_views: 857
 ---
 
 You understand the problem. Sessions stay valid for hours after security context changes. Part 1 established that. You understand how CAEP solves it. Events flow from systems that detect changes to applications that respond. Part 2 walked through the mechanics.

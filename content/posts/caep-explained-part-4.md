@@ -1,12 +1,25 @@
 ---
 title: "CAEP and Zero Trust: Why AI Agents Make This Critical (Part 4 of 4)"
-description: "How continuous authorization enables Zero Trust architectures and why AI agents make session-based access control obsolete."
-summary: "The future isn't incremental. AI agents require transaction-level authorization. Zero Trust demands continuous verification. CAEP provides the infrastructure for both—and what's coming in the next 3-5 years."
+description: How continuous authorization enables Zero Trust architectures and
+  why AI agents make session-based access control obsolete.
+summary: The future isn't incremental. AI agents require transaction-level
+  authorization. Zero Trust demands continuous verification. CAEP provides the
+  infrastructure for both—and what's coming in the next 3-5 years.
 date: 2025-10-28T00:00:00Z
 lastmod: 2025-11-07T00:00:00Z
-author: ["Prithvi Poreddy"]
-tags: ["CAEP", "Zero Trust", "AI Agents", "Continuous Authorization", "Transaction-Level Access", "Future of IAM", "Autonomous Authorization"]
-categories: ["Identity Security", "Access Management"]
+author:
+  - Prithvi Poreddy
+tags:
+  - CAEP
+  - Zero Trust
+  - AI Agents
+  - Continuous Authorization
+  - Transaction-Level Access
+  - Future of IAM
+  - Autonomous Authorization
+categories:
+  - Identity Security
+  - Access Management
 draft: false
 featured: false
 ShowReadingTime: true
@@ -17,10 +30,11 @@ ShowCodeCopyButtons: true
 ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
-canonicalURL: "https://www.linkedin.com/pulse/caep-zero-trust-why-ai-agents-make-critical-part-4-prithvi-poreddy-64shc/"
+canonicalURL: https://www.linkedin.com/pulse/caep-zero-trust-why-ai-agents-make-critical-part-4-prithvi-poreddy-64shc/
 slug: caep-explained-part-4
 og_type: article
 robots: index, follow
+historic_views: 835
 ---
 
 You understand the problem from Part 1. You understand the mechanics from Part 2. You understand how to build it from Part 3.

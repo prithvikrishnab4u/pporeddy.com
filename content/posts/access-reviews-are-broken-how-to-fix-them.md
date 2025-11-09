@@ -1,7 +1,11 @@
 ---
 title: "Access Reviews Are Broken: How to Fix Them"
-description: Why access reviews fail in practice, how human behavior contributes, and how to redesign them for real governance instead of compliance checkboxes.
-summary: A practical guide to redesigning access reviews that actually reduce risk by aligning with how people think and work, not just compliance checkboxes.
+description: Why access reviews fail in practice, how human behavior
+  contributes, and how to redesign them for real governance instead of
+  compliance checkboxes.
+summary: A practical guide to redesigning access reviews that actually reduce
+  risk by aligning with how people think and work, not just compliance
+  checkboxes.
 date: 2025-10-11T00:00:00Z
 lastmod: 2025-10-11T00:00:00Z
 author: Prithvi Poreddy
@@ -23,6 +27,7 @@ canonicalURL: https://www.linkedin.com/pulse/access-reviews-broken-how-fix-them-
 slug: access-reviews-broken-how-to-fix
 og_type: article
 robots: index, follow
+historic_views: 806
 ---
 
 Access reviews weren't meant to be painful, tedious, or something people dread seeing in their inbox.

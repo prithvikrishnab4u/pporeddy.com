@@ -1,7 +1,10 @@
 ---
-title: "Identity Security for AI (MCP) Agents: A Four-Layer Continuous Authorization Model"
-description: Exploring how MCP agents require continuous authorization across four layers to achieve real identity security.
-summary: A detailed look at how AI agents built on MCP need continuous, layered authorization to achieve true identity trust.
+title: "Identity Security for AI (MCP) Agents: A Four-Layer Continuous
+  Authorization Model"
+description: Exploring how MCP agents require continuous authorization across
+  four layers to achieve real identity security.
+summary: A detailed look at how AI agents built on MCP need continuous, layered
+  authorization to achieve true identity trust.
 date: 2025-09-06T00:00:00Z
 lastmod: 2025-10-15T00:00:00Z
 author: Prithvi Poreddy
@@ -23,6 +26,7 @@ canonicalURL: https://www.linkedin.com/pulse/identity-security-mcp-agents-four-l
 slug: mcp-identity-authorization
 og_type: article
 robots: index, follow
+historic_views: 963
 ---
 Identity Security for AI (MCP) Agents: A Four-Layer Continuous Authorization Model   
 

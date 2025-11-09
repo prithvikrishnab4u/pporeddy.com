@@ -1,7 +1,8 @@
 ---
 title: "Beyond IAM: Architecting Identity for Workloads and AI Agents"
 date: 2025-09-16T00:00:00Z
-author: ["Prithvi Poreddy"]
+author:
+  - Prithvi Poreddy
 draft: false
 showToc: false
 TocOpen: false
@@ -13,9 +14,18 @@ ShowCodeCopyButtons: true
 ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
-canonicalURL: "https://www.linkedin.com/pulse/beyond-iam-architecting-identity-workloads-ai-agents-prithvi-poreddy-tvj0c/?trackingId=NuSg2ggeGolUCNuRuWxSpw%3D%3D"
-tags: ["IAM", "Identity Architecture", "Zero Trust", "Cloud-Native", "AI Agents", "SPIFFE", "Cybersecurity"]
-description: "How to architect identity as the control plane for workloads and AI agents in modern enterprises."
+canonicalURL: https://www.linkedin.com/pulse/beyond-iam-architecting-identity-workloads-ai-agents-prithvi-poreddy-tvj0c/?trackingId=NuSg2ggeGolUCNuRuWxSpw%3D%3D
+tags:
+  - IAM
+  - Identity Architecture
+  - Zero Trust
+  - Cloud-Native
+  - AI Agents
+  - SPIFFE
+  - Cybersecurity
+description: How to architect identity as the control plane for workloads and AI
+  agents in modern enterprises.
+historic_views: 989
 ---
 
 If you missed my last post on what makes something an identity, [start there](https://pporeddy.com/posts/beyond-iam-architecting-identity-for-workloads-and-ai-agents/) — it sets the groundwork. This piece goes deeper: how to architect identity as the control plane for enterprises running cloud workloads and autonomous agents.

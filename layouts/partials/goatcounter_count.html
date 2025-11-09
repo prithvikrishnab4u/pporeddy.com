@@ -1,19 +1,27 @@
 {{ $goatcounterUrl := printf "https://pporeddy.goatcounter.com/counter/%s.json" (.RelPermalink | urlquery) }}
+
+{{ $historic := default 0 .Params.historic_views }}
+
 <span class="goatcounter-views">
     <script>
+        // Define the historic count from Hugo's front matter
+        var historicViews = parseInt({{ $historic }});
+
         var r = new XMLHttpRequest();
         r.addEventListener('load', function () {
             var data = JSON.parse(this.responseText);
+            var totalViews = historicViews;
+
+            // Add the live unique count to the historic count
             if (data && data.count_unique) {
-                // Display the unique visitor count
-                document.getElementById('gc-{{ .File.UniqueID }}').innerText = data.count_unique + ' views';
-            } else {
-                // Optionally hide if no count is returned
-                document.getElementById('gc-{{ .File.UniqueID }}').parentElement.style.display = 'none';
+                totalViews += data.count_unique;
             }
+
+            // Display the final calculated total
+            document.getElementById('gc-{{ .File.UniqueID }}').innerText = totalViews.toLocaleString() + ' views';
         })
         r.open('GET', '{{ $goatcounterUrl }}')
         r.send()
     </script>
-    <span id="gc-{{ .File.UniqueID }}" title="Page views">0</span>
+    <span id="gc-{{ .File.UniqueID }}" title="Page views"></span>
 </span>

@@ -1,12 +1,27 @@
 ---
 title: "How CAEP Events Actually Work: Real Scenarios You Face Today (Part 2 of 4)"
-description: "Step-by-step breakdown of CAEP event flows, five critical event types, and real scenarios showing how continuous access evaluation works in practice."
-summary: "From contractor termination to session revocation in under 3 minutes. See exactly how CAEP events flow through your systems and why different applications respond differently to the same security event."
+description: Step-by-step breakdown of CAEP event flows, five critical event
+  types, and real scenarios showing how continuous access evaluation works in
+  practice.
+summary: From contractor termination to session revocation in under 3 minutes.
+  See exactly how CAEP events flow through your systems and why different
+  applications respond differently to the same security event.
 date: 2025-10-27T00:00:00Z
 lastmod: 2025-11-07T00:00:00Z
-author: ["Prithvi Poreddy"]
-tags: ["CAEP", "Security Events", "Session Management", "SSF", "Event-Driven Security", "Access Control", "Audit Trail", "Compliance"]
-categories: ["Identity Security", "Access Management"]
+author:
+  - Prithvi Poreddy
+tags:
+  - CAEP
+  - Security Events
+  - Session Management
+  - SSF
+  - Event-Driven Security
+  - Access Control
+  - Audit Trail
+  - Compliance
+categories:
+  - Identity Security
+  - Access Management
 draft: false
 featured: false
 ShowReadingTime: true
@@ -17,10 +32,11 @@ ShowCodeCopyButtons: true
 ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
-canonicalURL: "https://www.linkedin.com/pulse/how-caep-events-actually-work-real-scenarios-you-face-prithvi-poreddy-ij1oc/"
+canonicalURL: https://www.linkedin.com/pulse/how-caep-events-actually-work-real-scenarios-you-face-prithvi-poreddy-ij1oc/
 slug: caep-explained-part-2
 og_type: article
 robots: index, follow
+historic_views: 862
 ---
 
 Part 1 explained the problem: sessions stay valid for hours even when security context changes. CAEP solves this by creating real-time communication between systems that detect changes and applications that need to respond.

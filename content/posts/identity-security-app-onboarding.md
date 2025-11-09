@@ -1,12 +1,23 @@
 ---
-title: "Identity Security Moves at the Speed of App Onboarding"
-description: "Why accelerating application onboarding is the key to effective identity security—and how a SCIM Acceleration Gateway makes it possible."
-summary: "The SCIM Acceleration Gateway helps IAM teams onboard apps in days instead of weeks by abstracting messy APIs behind a clean SCIM 2.0 facade."
+title: Identity Security Moves at the Speed of App Onboarding
+description: Why accelerating application onboarding is the key to effective
+  identity security—and how a SCIM Acceleration Gateway makes it possible.
+summary: The SCIM Acceleration Gateway helps IAM teams onboard apps in days
+  instead of weeks by abstracting messy APIs behind a clean SCIM 2.0 facade.
 date: 2025-09-04T00:00:00Z
 lastmod: 2025-10-17T21:48:55Z
-author: ["Prithvi Poreddy"]
-tags: ["SCIM", "IAM", "IGA", "Identity Security", "Zero Trust", "Application Onboarding"]
-categories: ["Identity Security", "IAM Architecture"]
+author:
+  - Prithvi Poreddy
+tags:
+  - SCIM
+  - IAM
+  - IGA
+  - Identity Security
+  - Zero Trust
+  - Application Onboarding
+categories:
+  - Identity Security
+  - IAM Architecture
 draft: false
 featured: false
 ShowReadingTime: true
@@ -17,10 +28,11 @@ ShowCodeCopyButtons: true
 ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
-canonicalURL: "https://www.linkedin.com/pulse/identity-security-moves-speed-app-onboarding-prithvi-poreddy-xj19c/?trackingId=c11AYniU2FSmZ01dTYMLBQ%3D%3D"
+canonicalURL: https://www.linkedin.com/pulse/identity-security-moves-speed-app-onboarding-prithvi-poreddy-xj19c/?trackingId=c11AYniU2FSmZ01dTYMLBQ%3D%3D
 slug: identity-security-app-onboarding
 og_type: article
 robots: index, follow
+historic_views: 826
 ---
 
 ## 🚨The Problem: How to Onboard Apps in Days, Not Weeks

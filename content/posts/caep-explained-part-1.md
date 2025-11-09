@@ -1,12 +1,26 @@
 ---
 title: "CAEP Explained: Why Your Federated Sessions Are Broken (Part 1 of 4)"
-description: "Understanding the fundamental gap in federated identity systems and how CAEP solves the authentication-to-access time problem."
-summary: "A contractor's access ends at 5 PM, but their sessions stay active for hours. This isn't a bug—it's how federation works. CAEP fixes the structural problem nobody talks about."
+description: Understanding the fundamental gap in federated identity systems and
+  how CAEP solves the authentication-to-access time problem.
+summary: A contractor's access ends at 5 PM, but their sessions stay active for
+  hours. This isn't a bug—it's how federation works. CAEP fixes the structural
+  problem nobody talks about.
 date: 2025-10-27T00:00:00Z
 lastmod: 2025-11-07T00:00:00Z
-author: ["Prithvi Poreddy"]
-tags: ["CAEP", "Federated Identity", "Session Management", "Zero Trust", "Identity Security", "SSF", "OpenID", "Continuous Access Evaluation"]
-categories: ["Identity Security", "Access Management"]
+author:
+  - Prithvi Poreddy
+tags:
+  - CAEP
+  - Federated Identity
+  - Session Management
+  - Zero Trust
+  - Identity Security
+  - SSF
+  - OpenID
+  - Continuous Access Evaluation
+categories:
+  - Identity Security
+  - Access Management
 draft: false
 featured: false
 ShowReadingTime: true
@@ -17,10 +31,11 @@ ShowCodeCopyButtons: true
 ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
-canonicalURL: "https://www.linkedin.com/pulse/caep-explained-why-your-federated-sessions-broken-part-poreddy-bvegc/"
+canonicalURL: https://www.linkedin.com/pulse/caep-explained-why-your-federated-sessions-broken-part-poreddy-bvegc/
 slug: caep-explained-part-1
 og_type: article
 robots: index, follow
+historic_views: 870
 ---
 
 It's Friday at 5 PM. A contractor finishes their project. Three months of intensive work on your critical infrastructure. Their contract ends. HR marks them as terminated in your systems.
