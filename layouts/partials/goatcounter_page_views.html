@@ -1,17 +1,20 @@
-{{/* This partial fetches the count for the current page and displays it */}}
+{{/* HTML to display the count */}}
 <span class="page-view-counter">
     <span id="page-views-{{ .File.UniqueID }}">...</span> views
 </span>
 
 <script>
     var statsElementId = "page-views-{{ .File.UniqueID }}";
-    var path = "{{ .RelPermalink }}";
+    // Use .RelPermalink and remove trailing slash for path uniformity
+    var path = "{{ .RelPermalink | default .Permalink }}";
+    if (path.endsWith('/')) { path = path.slice(0, -1); }
+
     var r = new XMLHttpRequest;
 
     r.addEventListener("load", function () {
         var stats = JSON.parse(this.responseText);
 
-        // CORRECTED CONDITIONAL CHECK: Ensure stats object exists and count is not 0/undefined/null
+        // Only display if the unique count is greater than zero
         if (stats && stats.count_unique > 0) {
             document.getElementById(statsElementId).innerText = stats.count_unique.toLocaleString();
         } else {
@@ -20,7 +23,7 @@
         }
     });
 
-    // Using your correct subdomain: ppporeddy
+    // CRITICAL: Request the JSON data endpoint
     r.open("GET", "https://pporeddy.goatcounter.com/counter/" + encodeURIComponent(path) + ".json");
     r.send();
 </script>
