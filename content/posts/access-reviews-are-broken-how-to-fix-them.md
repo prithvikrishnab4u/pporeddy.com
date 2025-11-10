@@ -27,7 +27,7 @@ canonicalURL: https://www.linkedin.com/pulse/access-reviews-broken-how-fix-them-
 slug: access-reviews-broken-how-to-fix
 og_type: article
 robots: index, follow
-historic_views: 806
+historic_views: 2006
 ---
 
 Access reviews weren't meant to be painful, tedious, or something people dread seeing in their inbox.

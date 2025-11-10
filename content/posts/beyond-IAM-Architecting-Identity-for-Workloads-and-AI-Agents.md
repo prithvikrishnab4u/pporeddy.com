@@ -25,7 +25,7 @@ tags:
   - Cybersecurity
 description: How to architect identity as the control plane for workloads and AI
   agents in modern enterprises.
-historic_views: 989
+historic_views: 1989
 ---
 
 If you missed my last post on what makes something an identity, [start there](https://pporeddy.com/posts/beyond-iam-architecting-identity-for-workloads-and-ai-agents/) — it sets the groundwork. This piece goes deeper: how to architect identity as the control plane for enterprises running cloud workloads and autonomous agents.

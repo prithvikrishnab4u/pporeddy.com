@@ -36,7 +36,7 @@ canonicalURL: https://www.linkedin.com/pulse/how-caep-events-actually-work-real-
 slug: caep-explained-part-2
 og_type: article
 robots: index, follow
-historic_views: 862
+historic_views: 1862
 ---
 
 Part 1 explained the problem: sessions stay valid for hours even when security context changes. CAEP solves this by creating real-time communication between systems that detect changes and applications that need to respond.

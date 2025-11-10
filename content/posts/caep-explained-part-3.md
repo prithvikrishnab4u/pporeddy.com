@@ -36,7 +36,7 @@ canonicalURL: https://www.linkedin.com/pulse/implementing-caep-architecture-patt
 slug: caep-explained-part-3
 og_type: article
 robots: index, follow
-historic_views: 857
+historic_views: 957
 ---
 
 You understand the problem. Sessions stay valid for hours after security context changes. Part 1 established that. You understand how CAEP solves it. Events flow from systems that detect changes to applications that respond. Part 2 walked through the mechanics.

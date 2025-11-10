@@ -32,7 +32,7 @@ cover:
   alt: DRIP, Recurring and Fractional Investing
   caption: Three powerful investing strategies for building wealth
   relative: false
-historic_views: 822
+historic_views: 6822
 ---
 
 Robinhood started a revolution by providing commission free stock and ETF trading. In 6 years, Robinhood attracted over 10 million users to its trading platform. It provides crypto, options, stock, and ETF trading.

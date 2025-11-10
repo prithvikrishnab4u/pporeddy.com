@@ -28,7 +28,7 @@ canonicalURL: https://www.linkedin.com/pulse/utcp-mcp-missing-identity-layer-pri
 slug: utcp-mcp-missing-identity-layer
 og_type: article
 robots: index, follow
-historic_views: 908
+historic_views: 3908
 ---
 
 *Tool calling is easy. Trust isn't.*

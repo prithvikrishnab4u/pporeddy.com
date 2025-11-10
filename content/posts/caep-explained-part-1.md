@@ -35,7 +35,7 @@ canonicalURL: https://www.linkedin.com/pulse/caep-explained-why-your-federated-s
 slug: caep-explained-part-1
 og_type: article
 robots: index, follow
-historic_views: 870
+historic_views: 976
 ---
 
 It's Friday at 5 PM. A contractor finishes their project. Three months of intensive work on your critical infrastructure. Their contract ends. HR marks them as terminated in your systems.

@@ -34,7 +34,7 @@ canonicalURL: https://www.linkedin.com/pulse/stop-treating-email-addresses-ident
 slug: stop-treating-email-addresses-as-identifiers
 og_type: article
 robots: index, follow
-historic_views: 951
+historic_views: 551
 ---
 
 An employee leaves your company. Eighteen months later, their email address is reassigned to a new hire.
