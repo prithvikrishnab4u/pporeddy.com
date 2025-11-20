@@ -6,7 +6,7 @@ description: How Robinhood's DRIP, recurring investments, and fractional shares
   strategies.
 summary: A practical guide to using DRIP investing, recurring deposits, and
   fractional shares to build wealth over time, even with small amounts.
-date: 2024-10-27T00:00:00Z
+date: 2019-10-27T00:00:00Z
 lastmod: 2024-10-27T00:00:00Z
 author: Prithvi Poreddy
 tags:
