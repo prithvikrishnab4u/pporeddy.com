@@ -8,17 +8,6 @@ cover:
   caption: "Prithvi Poreddy"
 ---
 
-<div align="center">
-
-<img src="/images/my-profile-pic.png"
-     alt="Prithvi Poreddy"
-     width="150"
-     height="150"
-     style="border-radius:50%;margin-bottom:15px;box-shadow:0 0 12px rgba(0,0,0,0.25);">
-
-</div>
-
-
 👋 Hi, I’m **Prithvi Poreddy** — a Product Leader specializing in **Identity Security, IAM, and AI-driven Governance**.
 
 Currently, I work at the intersection of **Identity, Risk, and Intelligent Automation**, helping enterprises build secure and scalable identity foundations.
