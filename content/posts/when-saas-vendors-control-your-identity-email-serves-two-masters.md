@@ -38,17 +38,13 @@ series: ["Enterprise Identifiers"]
 historic_views: 1908
 ---
 
-{{< notice note >}}
-This is the second article in a two-part series on enterprise identifiers. Read [Part 1: Stop Treating Email Addresses as Identifiers](https://iam.ninja/posts/stop-treating-email-addresses-as-identifiers/).
-{{< /notice >}}
-
-In the previous article, we established the principle: use immutable system identifiers internally and treat email as a mutable attribute. One person, one identity. Then you try to implement it.
+In the [previous article](https://iam.ninja/posts/stop-treating-email-addresses-as-identifiers/), we established the principle: use immutable system identifiers internally and treat email as a mutable attribute. One person, one identity. Then you try to implement it.
 
 Your SaaS vendors don't care about your immutable identifiers. Salesforce wants an email address. Workday wants an email address. Slack, Microsoft 365, Google Workspace all want email addresses. Not as one attribute among many, but as the primary identifier that defines the user account.
 
 You can't change this. It's their architecture.
 
-Email serves two masters: it's both your business communication tool and a technical identifier in systems you don't control. This creates fundamental tension with the principles from Article 1.
+Email serves two masters: it's both your business communication tool and a technical identifier in systems you don't control. This creates fundamental tension with the principles from [Article 1](https://iam.ninja/posts/stop-treating-email-addresses-as-identifiers/).
 
 ## Why This Creates Problems
 
