@@ -21,9 +21,6 @@ site.Params.DateFormat)))) }}
 {{- end }}
 {{- end }}
 
-{{/* CORRECT WAY: Add GoatCounter Views to the metadata scratchpad */}}
-{{- $scratch.Add "meta" (slice (printf "<span>%s</span>" (partial "goatcounter_count.html" . ))) }}
-
 {{- with ($scratch.Get "meta") }}
 {{- delimit . "&nbsp;·&nbsp;" | safeHTML -}}
 {{- end -}}
