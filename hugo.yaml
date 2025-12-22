@@ -27,6 +27,7 @@ params:
   copyright: "© 2025 Prithvi Poreddy"
   ShowCodeCopyButtons: true
   ShowWordCount: true
+  ShowViewCount: false
   UseHugoToc: true
   comments: false
   hideFooter: true
@@ -64,8 +65,6 @@ params:
       url: "https://github.com/prithvikrishnab4u"
     - name: linkedin
       url: "https://linkedin.com/in/pporeddy"
-    - name: instagram
-      url: "https://instagram.com/prithvikrishnab4u"
 
 menu:
   main:
