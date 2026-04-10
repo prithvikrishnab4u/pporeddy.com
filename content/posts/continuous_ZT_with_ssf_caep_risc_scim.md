@@ -1,6 +1,6 @@
 ---
 title: "SSF, CAEP, RISC, and SCIM Events: the standards turning Zero Trust from a principle into a reality"
-description: "Most environments verify once at login, then trust for eight hours. These four standards — SSF, CAEP, RISC, and SCIM Events — form the signaling layer that makes continuous verification real."
+description: "Most environments verify once at login, then trust for eight hours. These four standards, SSF, CAEP, RISC, and SCIM Events, form the signaling layer that makes continuous verification real."
 summary: "A practical breakdown of how SSF, CAEP, RISC, and SCIM Events work together to close the gap between Zero Trust as a principle and Zero Trust as a functioning architecture."
 date: 2026-03-05T00:00:00Z
 lastmod: 2026-04-10T00:00:00Z
