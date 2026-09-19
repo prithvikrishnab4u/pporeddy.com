@@ -29,6 +29,7 @@ cover:
   alt: Diagram showing a reader and a publisher sharing one agent and getting the same three tools
   caption: Both users are identified correctly. Both get the same three tools.
   relative: false
+  hiddenInSingle: true
 og_type: article
 robots: index, follow
 ---
@@ -69,7 +70,7 @@ flowchart LR
 
 ## Agents make existing access easier to use
 
-The user already holds whatever permissions they hold in the SaaS app.
+Agents don't create new entitlements. The user already holds whatever permissions they hold in the SaaS app.
 
 What agents change is the effort required to use that access. A permission a person never uses, because it's buried three menus deep, carries little practical risk. Behind an agent, the same permission is one sentence away.
 
