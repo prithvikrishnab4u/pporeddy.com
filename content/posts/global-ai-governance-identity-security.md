@@ -25,7 +25,6 @@ canonicalURL: https://www.linkedin.com/pulse/global-ai-governance-what-means-ide
 slug: global-ai-governance-identity-security
 og_type: article
 robots: index, follow
-historic_views: 1988
 ---
 
 ## The NHI Sprawl Reality

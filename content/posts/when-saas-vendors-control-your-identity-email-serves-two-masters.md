@@ -35,7 +35,6 @@ slug: when-saas-vendors-control-your-identity-email-serves-two-masters
 og_type: article
 robots: index, follow
 series: ["Enterprise Identifiers"]
-historic_views: 1908
 ---
 
 In the [previous article](https://iam.ninja/posts/stop-treating-email-addresses-as-identifiers/), we established the principle: use immutable system identifiers internally and treat email as a mutable attribute. One person, one identity. Then you try to implement it.

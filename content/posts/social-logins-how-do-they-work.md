@@ -33,7 +33,6 @@ canonicalURL: https://medium.com/@pporeddy/social-logins-how-do-they-work-f82398
 slug: social-logins-how-do-they-work
 og_type: article
 robots: index, follow
-historic_views: 1008
 ---
 
 Social login is a type of sign-on. Instead of creating a fresh account for new users, websites and services use information from a social networking service to sign you in. It simplifies logins for users. No need to remember distinct passwords for different websites.

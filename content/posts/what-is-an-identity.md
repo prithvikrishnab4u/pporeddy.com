@@ -32,7 +32,6 @@ canonicalURL: https://www.linkedin.com/pulse/what-identity-defining-digital-prin
 slug: what-is-an-identity
 og_type: article
 robots: index, follow
-historic_views: 2808
 ---
 
 > *I think therefore IAM*

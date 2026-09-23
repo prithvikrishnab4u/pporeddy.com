@@ -29,7 +29,6 @@ canonicalURL: https://www.linkedin.com/pulse/making-sense-identitys-alphabet-sou
 slug: identity-alphabet-soup-ispm-ivip-itdr
 og_type: article
 robots: index, follow
-historic_views: 973
 ---
 
 

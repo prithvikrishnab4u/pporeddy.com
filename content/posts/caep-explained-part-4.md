@@ -34,7 +34,6 @@ canonicalURL: https://www.linkedin.com/pulse/caep-zero-trust-why-ai-agents-make-
 slug: caep-explained-part-4
 og_type: article
 robots: index, follow
-historic_views: 835
 ---
 
 You understand the problem from Part 1. You understand the mechanics from Part 2. You understand how to build it from Part 3.

@@ -1,7 +1,7 @@
 baseURL: "https://iam.ninja/"
 title: "Prithvi Poreddy"
 pagination:
-  pagerSize: 5
+  pagerSize: 10
 theme: ["PaperMod"]
 
 enableRobotsTXT: true
@@ -18,30 +18,27 @@ outputs:
 params:
   env: production
   title: "Prithvi Poreddy"
-  description: "Identtiy Security | Product Leader | Identity & Access Management | AI Security Strategy"
+  description: "Identity Security | Product Leader | Identity & Access Management | AI Security Strategy"
   author: "Prithvi Poreddy"
   defaultTheme: auto # auto switches between light/dark based on system
   ShowReadingTime: true
   ShowBreadCrumbs: false
   ShowPostNavLinks: true
-  copyright: "© 2025 Prithvi Poreddy"
   ShowCodeCopyButtons: true
   ShowWordCount: true
-  ShowViewCount: false
   UseHugoToc: true
+  ShowToc: true
+  TocOpen: false
   comments: false
-  hideFooter: true
   assets:
     disableHLJS: false # Keep syntax highlighting on
     disableFingerprinting: true
-  customJS: # 👇 Enable Mermaid diagrams
-    - "js/mermaid.min.js"
   label: #image next to name on home page
     text: "Prithvi Poreddy"
     icon: "/images/bw-logo.jpg" # path to your logo
     iconHeight: 32 # size in pixels
 
-  images: ["/my-profile-pic.jpg"]
+  images: ["/images/my-profile-pic.jpg"]
 
   openGraph:
     type: website

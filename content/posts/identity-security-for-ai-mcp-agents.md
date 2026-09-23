@@ -26,7 +26,6 @@ canonicalURL: https://www.linkedin.com/pulse/identity-security-mcp-agents-four-l
 slug: mcp-identity-authorization
 og_type: article
 robots: index, follow
-historic_views: 5028
 ---
 Identity Security for AI (MCP) Agents: A Four-Layer Continuous Authorization Model
 

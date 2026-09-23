@@ -32,7 +32,6 @@ canonicalURL: https://www.linkedin.com/pulse/identity-security-moves-speed-app-o
 slug: identity-security-app-onboarding
 og_type: article
 robots: index, follow
-historic_views: 826
 ---
 
 ## 🚨The Problem: How to Onboard Apps in Days, Not Weeks

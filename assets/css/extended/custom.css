@@ -1,31 +1,240 @@
-/* === Modern Polished Search Results === */
+/* ==========================================================================
+   Site polish layer — loaded after PaperMod's own CSS.
+   Everything here uses PaperMod's theme variables (--entry, --border,
+   --primary, --secondary, --content, --code-bg, --radius) so light and dark
+   both work automatically. Add an accent by changing --accent below.
+   ========================================================================== */
+
+:root {
+    --accent: #2f6fed;
+    --accent-soft: rgba(47, 111, 237, 0.10);
+}
+
+:root[data-theme="dark"] {
+    --accent: #6ea0ff;
+    --accent-soft: rgba(110, 160, 255, 0.14);
+}
+
+/* --- Reading typography -------------------------------------------------- */
+
+.post-content {
+    line-height: 1.75;
+    font-size: 1.03rem;
+    letter-spacing: 0.003em;
+}
+
+.post-content p {
+    margin: 1.15em 0;
+}
+
+.post-content h2,
+.post-content h3,
+.post-content h4 {
+    letter-spacing: -0.015em;
+    line-height: 1.3;
+}
+
+.post-content h2 {
+    margin-top: 2.4em;
+    margin-bottom: 0.7em;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid var(--border);
+}
+
+.post-content h3 {
+    margin-top: 1.9em;
+    margin-bottom: 0.5em;
+}
+
+.post-title {
+    letter-spacing: -0.025em;
+    line-height: 1.2;
+}
+
+/* Body links: readable underline that brightens on hover */
+.post-content a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+    transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.post-content a:hover {
+    border-bottom-color: var(--accent);
+    background: var(--accent-soft);
+}
+
+/* Headings keep PaperMod's anchor behaviour, not the accent treatment */
+.post-content h1 a,
+.post-content h2 a,
+.post-content h3 a,
+.post-content h4 a {
+    border-bottom: none;
+    background: none;
+}
+
+/* --- Pull quotes --------------------------------------------------------- */
+/* Posts open with a `>` thesis line; give it real presence. */
+
+.post-content blockquote {
+    margin: 1.8em 0;
+    padding: 0.2em 0 0.2em 1.4em;
+    border-inline-start: 3px solid var(--accent);
+    font-style: normal;
+    font-size: 1.08em;
+    line-height: 1.65;
+    color: var(--primary);
+}
+
+.post-content blockquote p:first-child {
+    margin-top: 0;
+}
+
+.post-content blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+/* --- Section dividers ---------------------------------------------------- */
+
+.post-content hr {
+    height: 1px;
+    border: 0;
+    margin: 2.6em auto;
+    width: 42%;
+    background: var(--border);
+}
+
+/* --- Code ---------------------------------------------------------------- */
+
+.post-content pre {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    line-height: 1.55;
+}
+
+.post-content code {
+    border-radius: 4px;
+}
+
+/* --- Images and Mermaid diagrams ---------------------------------------- */
+
+.post-content img {
+    border-radius: var(--radius);
+    display: block;
+    margin: 1.6em auto;
+}
+
+.entry-cover img,
+.post-cover img {
+    border-radius: var(--radius);
+}
+
+.post-content .mermaid {
+    margin: 2em 0;
+    padding: 1.25rem;
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow-x: auto;
+    text-align: center;
+}
+
+.post-content .mermaid svg {
+    max-width: 100%;
+    height: auto;
+}
+
+/* --- Table of contents --------------------------------------------------- */
+
+.toc {
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin-bottom: 2.2em;
+}
+
+.toc details summary {
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+}
+
+.toc .inner {
+    line-height: 1.65;
+}
+
+.toc a {
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+.toc a:hover {
+    color: var(--accent);
+}
+
+/* --- Post list entries --------------------------------------------------- */
+/* Matches the search-result card treatment below, so lists feel like one system. */
+
+.post-entry {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.post-entry:hover {
+    transform: translateY(-2px);
+    border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
+}
+
+:root[data-theme="dark"] .post-entry:hover {
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+}
+
+.entry-hint {
+    color: var(--secondary);
+}
+
+/* Tag pills */
+.post-tags a,
+.terms-tags a {
+    border-radius: 999px;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.post-tags a:hover,
+.terms-tags a:hover {
+    background: var(--accent-soft);
+    color: var(--accent);
+}
+
+/* --- Search results ------------------------------------------------------ */
 
 #searchResults {
     list-style: none;
     padding: 0;
-    margin-top: 1.8rem;
+    margin-top: 1.2rem;
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 1rem;
 }
 
-/* Search result card */
 .search-result {
     background: var(--entry);
     border-radius: var(--radius);
     border: 1px solid var(--border);
     padding: 1.2rem 1.6rem;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-    transition: all 0.15s ease;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
     line-height: 1.6;
 }
 
 .search-result:hover {
     transform: translateY(-2px);
+    border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
 }
 
-/* Title */
 .result-title {
     display: block;
     font-weight: 700;
@@ -37,61 +246,26 @@
 }
 
 .result-title:hover {
-    color: var(--link-hover);
+    color: var(--accent);
 }
 
-/* Snippet */
 .result-snippet {
+    position: relative;
+    overflow: hidden;
     font-size: 0.96rem;
     color: var(--secondary);
     line-height: 1.65;
     margin: 0.4rem 0 0;
-    /* consistent top spacing */
     padding: 0;
-    /* no inner padding */
     white-space: normal;
-    /* ensure wrapping */
 }
 
-/* Highlight */
-mark {
-    background-color: #fff59d;
-    color: inherit;
-    border-radius: 3px;
-    padding: 0 2px;
-}
-
-html[data-theme='dark'] mark {
-    background-color: #665c00;
-}
-
-/* Input field consistency */
-#searchInput {
-    border-radius: 8px;
-    padding: 0.65rem 0.9rem;
-    border: 1px solid var(--border);
-    font-size: 1rem;
-    transition: box-shadow 0.2s ease;
-}
-
-#searchInput:focus {
-    outline: none;
-    box-shadow: 0 0 0 2px var(--primary);
-}
-
-/* Small spacing between multiple paragraphs in snippet */
 .result-snippet p {
     margin: 0.25rem 0 0 !important;
     line-height: 1.6;
 }
 
-/* --- Fade-out effect for long snippets --- */
-
-.result-snippet {
-    position: relative;
-    overflow: hidden;
-}
-
+/* Fade out long snippets */
 .result-snippet::after {
     content: "";
     position: absolute;
@@ -102,20 +276,50 @@ html[data-theme='dark'] mark {
     background: linear-gradient(to bottom, transparent, var(--entry));
 }
 
-/* Slightly softer highlight color */
+#searchInput {
+    border-radius: var(--radius);
+    padding: 0.65rem 0.9rem;
+    border: 1px solid var(--border);
+    font-size: 1rem;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+#searchInput:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
 mark {
-    background-color: #fff4a3;
+    background-color: var(--accent-soft);
     color: inherit;
     border-radius: 2px;
     padding: 0 2px;
 }
 
-html[data-theme='dark'] mark {
-    background-color: #857600;
+/* --- Footer -------------------------------------------------------------- */
+
+.footer {
+    border-top: 1px solid var(--border);
+    margin-top: 2.5rem;
+    padding-top: 1.25rem;
+    font-size: 0.82rem;
 }
 
-/* Adjust spacing between cards */
-#searchResults {
-    margin-top: 1.2rem;
-    gap: 1rem;
+/* --- Motion preferences -------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .post-entry,
+    .search-result,
+    .post-content a,
+    .post-tags a,
+    #searchInput {
+        transition: none;
+    }
+
+    .post-entry:hover,
+    .search-result:hover {
+        transform: none;
+    }
 }
