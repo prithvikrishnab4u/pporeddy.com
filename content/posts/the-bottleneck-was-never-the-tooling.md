@@ -40,7 +40,7 @@ The fix is to remove the identity team from the path for the routine cases and k
 
 ## The constraint that shaped the design
 
-Self-service portals for infrastructure usually pick an audience and lose the other one. Build a web form and the platform teams route around it, because they already manage everything else as code and will not hand-configure one system by hand. Build a Terraform module and the application teams cannot use it, because they are product engineers who have never written HCL and should not have to learn.
+Self-service portals for infrastructure usually pick an audience and lose the other one. Build a web form and the platform teams route around it, because they already manage everything else as code and will not hand-configure one system. Build a Terraform module and the application teams cannot use it, because they are product engineers who have never written HCL and should not have to learn.
 
 Picking a side means half your users bypass the system, and a self-service system that half the organization bypasses is worse than no system at all. You now have two sources of truth and no idea which one is current.
 
