@@ -10,9 +10,35 @@
     --accent-soft: rgba(47, 111, 237, 0.10);
 }
 
+/* Dark palette: PaperMod's default is a flat neutral grey (#1d1e20 / #2e2e33)
+   with weak contrast. A navy-tinted scale ties dark mode to the blue accent. */
 :root[data-theme="dark"] {
     --accent: #6ea0ff;
     --accent-soft: rgba(110, 160, 255, 0.14);
+    --theme: #0d1117;
+    --entry: #151b26;
+    --primary: #e6edf6;
+    --secondary: #9aa7b8;
+    --tertiary: #1f2735;
+    --content: #d3dbe6;
+    --code-block-bg: #111722;
+    --code-bg: #1b2230;
+    --border: #263043;
+}
+
+/* Tone down bright white covers and screenshots so they don't glare */
+:root[data-theme="dark"] .entry-cover img,
+:root[data-theme="dark"] .post-content img {
+    filter: brightness(0.88) contrast(1.05);
+}
+
+/* Mermaid paints edge labels with an opaque light box; blend it in */
+:root[data-theme="dark"] .post-content .mermaid .edgeLabel,
+:root[data-theme="dark"] .post-content .mermaid .edgeLabel rect,
+:root[data-theme="dark"] .post-content .mermaid .edgeLabel p,
+:root[data-theme="dark"] .post-content .mermaid .labelBkg {
+    background-color: var(--entry) !important;
+    fill: var(--entry) !important;
 }
 
 /* --- Reading typography -------------------------------------------------- */
