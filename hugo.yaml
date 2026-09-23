@@ -53,6 +53,15 @@ params:
   # Home Info section (like PaperMod demo)
   homeInfoParams:
     Title: "Prithvi Poreddy"
+    Eyebrow: "Identity Security · IAM · AI Governance"
+    Avatar: "/images/bw-logo.jpg"
+    LatestLabel: "Latest writing"
+    Buttons:
+      - name: "Read the posts →"
+        url: "/posts/"
+        primary: true
+      - name: "About me"
+        url: "/about/"
     Content: >
       Product leader in Identity Security & AI Governance, building trustworthy systems for humans & machines while sharing insights on technology, risk, and design.
 

@@ -1,0 +1,31 @@
+{{- /* Overrides PaperMod's home_info: adds avatar, eyebrow, CTA buttons and a
+     "latest" label so the hero reads as an introduction, not a blank banner. */ -}}
+{{- with site.Params.homeInfoParams }}
+<article class="first-entry home-info">
+    <div class="home-hero">
+        {{- with .Avatar }}
+        <img class="home-avatar" src="{{ . | absURL }}" alt="{{ site.Params.author }}" width="88" height="88">
+        {{- end }}
+        <div class="home-text">
+            {{- with .Eyebrow }}
+            <p class="home-eyebrow">{{ . }}</p>
+            {{- end }}
+            <header class="entry-header">
+                <h1>{{ .Title | markdownify }}</h1>
+            </header>
+            <div class="entry-content">
+                {{ .Content | markdownify }}
+            </div>
+        </div>
+    </div>
+    <footer class="entry-footer home-actions">
+        {{- range .Buttons }}
+        <a class="home-btn{{ if .primary }} home-btn-primary{{ end }}" href="{{ .url | relURL }}">{{ .name }}</a>
+        {{- end }}
+        {{ partial "social_icons.html" (dict "align" site.Params.homeInfoParams.AlignSocialIconsTo) }}
+    </footer>
+</article>
+{{- with .LatestLabel }}
+<h2 class="home-section-label">{{ . }}</h2>
+{{- end }}
+{{- end -}}
