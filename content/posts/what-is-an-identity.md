@@ -44,7 +44,7 @@ Here's the real definition: **An identity is a principal that can be authenticat
 
 This distinction matters more than ever. We're living in an age where humans, machines, services, and AI agents all need digital identities to operate securely. Understanding what makes something an identity—and what doesn't—is foundational to building secure systems.
 
-If you found this useful, you’ll like the sequel: *[Beyond IAM: Architecting Identity for Workloads and AI Agents.](https://pporeddy.com/posts/beyond-iam-architecting-identity-for-workloads-and-ai-agents/)*
+If you found this useful, you’ll like the sequel: *[Beyond IAM: Architecting Identity for Workloads and AI Agents.](/posts/beyond-iam-architecting-identity-for-workloads-and-ai-agents/)*
 
 ***
 

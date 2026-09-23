@@ -1,10 +1,10 @@
 ---
 title: "Beyond IAM: Architecting Identity for Workloads and AI Agents"
 date: 2025-09-16T00:00:00Z
+lastmod: 2025-09-16T00:00:00Z
 author:
   - Prithvi Poreddy
 draft: false
-showToc: false
 TocOpen: false
 ShowReadingTime: true
 ShowShareButtons: true
@@ -25,9 +25,16 @@ tags:
   - Cybersecurity
 description: How to architect identity as the control plane for workloads and AI
   agents in modern enterprises.
+summary: From traditional IAM to cloud-native workloads and autonomous agents,
+  the production architecture patterns that make identity the control plane
+  across every identity type.
+categories:
+  - Identity Security
+  - Security Architecture
+slug: beyond-iam-architecting-identity-for-workloads-and-ai-agents
 ---
 
-If you missed my last post on what makes something an identity, [start there](https://pporeddy.com/posts/beyond-iam-architecting-identity-for-workloads-and-ai-agents/) — it sets the groundwork. This piece goes deeper: how to architect identity as the control plane for enterprises running cloud workloads and autonomous agents.
+If you missed my last post on what makes something an identity, [start there](/posts/what-is-an-identity/) — it sets the groundwork. This piece goes deeper: how to architect identity as the control plane for enterprises running cloud workloads and autonomous agents.
 
 This isn’t theory. It’s about production identity architectures that handle millions of authentications, thousands of microservices, and the new security challenges of AI agents.
 
