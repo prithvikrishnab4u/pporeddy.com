@@ -395,6 +395,52 @@
     color: var(--secondary);
 }
 
+/* Accent spine: a thin tinted bar on each card that deepens on hover.
+   Adds colour to the lists without breaking the minimal look. */
+.post-entry:not(.home-info) {
+    border-inline-start: 3px solid color-mix(in srgb, var(--accent) 35%, var(--border));
+}
+
+.post-entry:not(.home-info):hover {
+    border-inline-start-color: var(--accent);
+}
+
+/* Topic pill (first tag), rendered at the start of the byline */
+.entry-topic {
+    display: inline-block;
+    margin-inline-end: 0.6rem;
+    padding: 0.1rem 0.6rem;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 0.86em;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    line-height: 1.6;
+    vertical-align: 0.05em;
+}
+
+/* List page header (/posts/, taxonomy pages) */
+.page-header h1 {
+    letter-spacing: -0.03em;
+}
+
+.page-header .post-description {
+    color: var(--secondary);
+    font-size: 1.02rem;
+    line-height: 1.6;
+}
+
+.page-header h1::after {
+    content: "";
+    display: block;
+    width: 2.5rem;
+    height: 3px;
+    margin-top: 0.6rem;
+    border-radius: 3px;
+    background: var(--accent);
+}
+
 /* Tag pills */
 .post-tags a,
 .terms-tags a {

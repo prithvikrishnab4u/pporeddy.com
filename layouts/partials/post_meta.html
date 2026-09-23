@@ -21,6 +21,13 @@ site.Params.DateFormat)))) }}
 {{- end }}
 {{- end }}
 
+{{- /* Topic pill: first tag (more specific than the category, which is
+     "Identity Security" on most posts). A span, not a link: list cards are
+     covered by PaperMod's full-card a.entry-link overlay. */ -}}
+{{- with .Params.tags }}
+<span class="entry-topic">{{ index . 0 }}</span>
+{{- end }}
+
 {{- with ($scratch.Get "meta") }}
 {{- delimit . "&nbsp;·&nbsp;" | safeHTML -}}
 {{- end -}}
