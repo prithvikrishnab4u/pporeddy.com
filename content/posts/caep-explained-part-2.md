@@ -6,7 +6,7 @@ description: Step-by-step breakdown of CAEP event flows, five critical event
 summary: From contractor termination to session revocation in under 3 minutes.
   See exactly how CAEP events flow through your systems and why different
   applications respond differently to the same security event.
-date: 2025-10-27T00:00:00Z
+date: 2025-10-27T12:00:00Z
 lastmod: 2025-11-07T00:00:00Z
 author:
   - Prithvi Poreddy

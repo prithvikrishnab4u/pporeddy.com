@@ -5,7 +5,7 @@ description: How continuous authorization enables Zero Trust architectures and
 summary: The future isn't incremental. AI agents require transaction-level
   authorization. Zero Trust demands continuous verification. CAEP provides the
   infrastructure for both—and what's coming in the next 3-5 years.
-date: 2025-10-28T00:00:00Z
+date: 2025-10-28T12:00:00Z
 lastmod: 2025-11-07T00:00:00Z
 author:
   - Prithvi Poreddy
