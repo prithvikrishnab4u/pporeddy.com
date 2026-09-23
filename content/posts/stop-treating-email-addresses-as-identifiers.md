@@ -9,17 +9,17 @@ lastmod: 2025-11-08T00:00:00Z
 author:
   - Prithvi Poreddy
 tags:
-  - identity management
+  - Identity Management
   - IAM
-  - email addresses
-  - system identifiers
-  - immutable identifiers
-  - identity architecture
-  - authentication
-  - security
+  - Email Addresses
+  - System Identifiers
+  - Immutable Identifiers
+  - Identity Architecture
+  - Authentication
+  - Security
 categories:
   - Identity Security
-  - IAM
+  - Identity and Access Management
 draft: false
 featured: false
 ShowReadingTime: true
@@ -30,7 +30,7 @@ ShowCodeCopyButtons: true
 ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
-canonicalURL: https://www.linkedin.com/pulse/stop-treating-email-addresses-identifiers-prithvi-poreddy-ytbnc/?trackingId=f8udmIVUqS6NuO2A71lOYw%3D%3D
+canonicalURL: https://www.linkedin.com/pulse/stop-treating-email-addresses-identifiers-prithvi-poreddy-ytbnc/
 slug: stop-treating-email-addresses-as-identifiers
 og_type: article
 robots: index, follow

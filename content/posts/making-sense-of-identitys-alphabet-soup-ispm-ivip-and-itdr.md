@@ -7,17 +7,18 @@ summary: A comprehensive guide to understanding how ISPM, IVIP, and ITDR work
   defense.
 date: 2025-10-08T00:00:00Z
 lastmod: 2025-10-08T00:00:00Z
-author: Prithvi Poreddy
+author:
+  - Prithvi Poreddy
 tags:
-  - IdentitySecurity
+  - Identity Security
   - IAM
   - IVIP
   - ITDR
   - ISPM
   - Cybersecurity
-  - IdentityFabric
+  - Identity Fabric
   - Visibility
-  - ZeroTrust
+  - Zero Trust
 categories:
   - Identity Security
   - Security Architecture

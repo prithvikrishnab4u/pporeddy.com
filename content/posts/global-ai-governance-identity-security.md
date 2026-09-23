@@ -1,5 +1,5 @@
 ---
-title: "🌍 Global AI Governance: What It Means for the Identity Security"
+title: "🌍 Global AI Governance: What It Means for Identity Security"
 description: How emerging global AI regulations impact IAM and IGA practices across regions.
 summary: Explores the implications of AI governance laws on identity security,
   emphasizing non-human identities and auditability.
@@ -7,7 +7,13 @@ date: 2025-08-27T00:00:00Z
 lastmod: 2025-10-17T00:00:00Z
 author:
   - Prithvi Poreddy
-tags: []
+tags:
+  - AI Governance
+  - Identity Security
+  - IAM
+  - IGA
+  - Non-Human Identity
+  - Compliance
 categories:
   - Identity Security
   - AI Governance
@@ -21,7 +27,7 @@ ShowCodeCopyButtons: true
 ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
-canonicalURL: https://www.linkedin.com/pulse/global-ai-governance-what-means-identity-security-prithvi-poreddy-xibjc/?trackingId=Ga9QWGOQg45z7ps9OrlfnA%3D%3D
+canonicalURL: https://www.linkedin.com/pulse/global-ai-governance-what-means-identity-security-prithvi-poreddy-xibjc/
 slug: global-ai-governance-identity-security
 og_type: article
 robots: index, follow

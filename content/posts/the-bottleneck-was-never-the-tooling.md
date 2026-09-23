@@ -4,16 +4,17 @@ description: What I learned building a self-service SSO onboarding prototype.
 summary: SSO onboarding is slow because of the queue, not the tooling. A working prototype shows the routine path does not need an administrator, and the one checkpoint that should stay human.
 date: 2026-09-14T00:00:00Z
 lastmod: 2026-09-14T00:00:00Z
-author: Prithvi Poreddy
+author:
+  - Prithvi Poreddy
 tags:
   - IAM
   - SSO
   - Okta
   - Automation
-  - SelfService
+  - Self-Service
   - Provisioning
 categories:
-  - Identity Management
+  - Identity and Access Management
 draft: false
 featured: false
 ShowReadingTime: true

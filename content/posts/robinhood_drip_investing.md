@@ -8,12 +8,13 @@ summary: A practical guide to using DRIP investing, recurring deposits, and
   fractional shares to build wealth over time, even with small amounts.
 date: 2019-10-27T00:00:00Z
 lastmod: 2024-10-27T00:00:00Z
-author: Prithvi Poreddy
+author:
+  - Prithvi Poreddy
 tags:
   - Investing
   - DRIP
-  - FractionalShares
-  - PersonalFinance
+  - Fractional Shares
+  - Personal Finance
   - Robinhood
   - ETF
 categories:

@@ -7,14 +7,15 @@ summary: A detailed look at how AI agents built on MCP need continuous, layered
   authorization to achieve true identity trust.
 date: 2025-09-06T00:00:00Z
 lastmod: 2025-10-15T00:00:00Z
-author: Prithvi Poreddy
+author:
+  - Prithvi Poreddy
 tags:
   - MCP
   - IAM
   - Authorization
   - SPIFFE
-  - ZeroTrust
-  - AIAgents
+  - Zero Trust
+  - AI Agents
 categories:
   - Identity Security
   - AI Infrastructure

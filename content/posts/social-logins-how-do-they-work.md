@@ -3,19 +3,19 @@ title: "Social Logins: How Do They Work?"
 description: A detailed exploration of social login mechanisms, OAuth 2.0, and OpenID Connect protocols that power modern authentication.
 summary: Understanding how social logins work using OAuth 2.0 and OpenID Connect, from the initial authentication flow to token management and user authorization.
 date: 2019-12-13T00:00:00Z
-lastmod:
+lastmod: 2019-12-13T00:00:00Z
 author:
   - Prithvi Poreddy
 tags:
-  - social login
+  - Social Login
   - OAuth
   - OpenID Connect
-  - authentication
-  - authorization
-  - identity provider
+  - Authentication
+  - Authorization
+  - Identity Provider
   - JWT
-  - access tokens
-  - security
+  - Access Tokens
+  - Security
 categories:
   - Identity and Access Management
   - Authentication

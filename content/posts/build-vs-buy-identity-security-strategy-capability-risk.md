@@ -5,7 +5,7 @@ summary: "Stop asking if you can build. Start asking if you should. A framework 
 date: 2026-01-05T00:00:00Z
 lastmod: 2026-01-23T00:00:00Z
 author: ["Prithvi Poreddy"]
-tags: ["identity security", "build vs buy", "IAM strategy", "risk management", "vendor selection", "engineering decisions", "security architecture", "technical debt", "compliance"]
+tags: ["Identity Security", "Build vs Buy", "IAM Strategy", "Risk Management", "Vendor Selection", "Engineering Decisions", "Security Architecture", "Technical Debt", "Compliance"]
 categories: ["Identity Security", "Strategy"]
 draft: false
 featured: false

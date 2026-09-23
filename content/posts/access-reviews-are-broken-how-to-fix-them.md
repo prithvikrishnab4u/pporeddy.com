@@ -8,13 +8,14 @@ summary: A practical guide to redesigning access reviews that actually reduce
   checkboxes.
 date: 2025-10-11T00:00:00Z
 lastmod: 2025-10-11T00:00:00Z
-author: Prithvi Poreddy
+author:
+  - Prithvi Poreddy
 tags:
   - IAM
   - Governance
-  - AccessReviews
+  - Access Reviews
   - Security
-  - UserExperience
+  - User Experience
   - Compliance
 categories:
   - Identity Governance

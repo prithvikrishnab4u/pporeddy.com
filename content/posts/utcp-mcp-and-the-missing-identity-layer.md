@@ -6,17 +6,18 @@ summary: An analysis of how UTCP and MCP both fail to address the fundamental
   challenge of identity and trust for AI agents, and what's needed to fix it.
 date: 2025-10-10T00:00:00Z
 lastmod: 2025-10-10T00:00:00Z
-author: Prithvi Poreddy
+author:
+  - Prithvi Poreddy
 tags:
   - UTCP
   - MCP
-  - AIAgents
+  - AI Agents
   - Governance
   - IAM
   - Cybersecurity
   - AI
   - Identity
-  - ZeroTrust
+  - Zero Trust
 categories:
   - AI Infrastructure
   - Identity Security

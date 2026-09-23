@@ -28,7 +28,7 @@ ShowCodeCopyButtons: true
 ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
-canonicalURL: https://www.linkedin.com/pulse/identity-security-moves-speed-app-onboarding-prithvi-poreddy-xj19c/?trackingId=c11AYniU2FSmZ01dTYMLBQ%3D%3D
+canonicalURL: https://www.linkedin.com/pulse/identity-security-moves-speed-app-onboarding-prithvi-poreddy-xj19c/
 slug: identity-security-app-onboarding
 og_type: article
 robots: index, follow

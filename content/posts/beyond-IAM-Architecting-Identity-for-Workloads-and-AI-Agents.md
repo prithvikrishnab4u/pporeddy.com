@@ -14,7 +14,7 @@ ShowCodeCopyButtons: true
 ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
-canonicalURL: https://www.linkedin.com/pulse/beyond-iam-architecting-identity-workloads-ai-agents-prithvi-poreddy-tvj0c/?trackingId=NuSg2ggeGolUCNuRuWxSpw%3D%3D
+canonicalURL: https://www.linkedin.com/pulse/beyond-iam-architecting-identity-workloads-ai-agents-prithvi-poreddy-tvj0c/
 tags:
   - IAM
   - Identity Architecture

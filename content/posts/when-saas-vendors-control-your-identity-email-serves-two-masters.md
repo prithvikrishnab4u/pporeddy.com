@@ -3,19 +3,19 @@ title: "When SaaS Vendors Control Your Identity: Email Serves Two Masters"
 description: How to manage identifiers when SaaS platforms require email as the primary identifier, and you can't change their architecture.
 summary: Practical strategies for maintaining immutable identifier architecture internally while working within SaaS platform constraints that require email as the primary identifier.
 date: 2025-11-19T00:00:00Z
-lastmod:
+lastmod: 2025-11-19T00:00:00Z
 author:
   - Prithvi Poreddy
 tags:
-  - identity management
+  - Identity Management
   - SaaS
-  - email identifiers
-  - enterprise identity
+  - Email Identifiers
+  - Enterprise Identity
   - IAM
-  - immutable identifiers
-  - identity architecture
-  - provisioning
-  - offboarding
+  - Immutable Identifiers
+  - Identity Architecture
+  - Provisioning
+  - Offboarding
   - SCIM
 categories:
   - Identity and Access Management

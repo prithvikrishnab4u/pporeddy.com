@@ -4,7 +4,8 @@ description: Enforcement patterns for agent tool access exist. What's missing is
 summary: Per-user OAuth answers who the user is. It doesn't answer which tools they should get through the agent. Treat each tool as an entitlement, requested, approved, reviewed, and revoked like any other access.
 date: 2026-09-18T00:00:00Z
 lastmod: 2026-09-18T00:00:00Z
-author: Prithvi Poreddy
+author:
+  - Prithvi Poreddy
 tags:
   - AI Agents
   - MCP

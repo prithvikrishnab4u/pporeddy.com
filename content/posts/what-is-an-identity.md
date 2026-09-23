@@ -12,8 +12,8 @@ tags:
   - Identity
   - IAM
   - AI
-  - ZeroTrust
-  - DigitalPrincipals
+  - Zero Trust
+  - Digital Principals
   - NHI
 categories:
   - Identity Security
@@ -28,7 +28,7 @@ ShowCodeCopyButtons: true
 ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
-canonicalURL: https://www.linkedin.com/pulse/what-identity-defining-digital-principals-age-ai-prithvi-poreddy-8rqac/?trackingId=OKYV5ZqUEgeWpfkzKzzCIw%3D%3D
+canonicalURL: https://www.linkedin.com/pulse/what-identity-defining-digital-principals-age-ai-prithvi-poreddy-8rqac/
 slug: what-is-an-identity
 og_type: article
 robots: index, follow
