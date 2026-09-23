@@ -28,12 +28,14 @@ No CI config lives in this repo; deployment is wired up outside it. Pushing to `
 
 ## Architecture
 
-Stock PaperMod plus a deliberately thin override layer. Hugo resolves `layouts/` and `assets/` here before the theme's, and only two layout overrides exist:
+Stock PaperMod plus a deliberately thin override layer. Hugo resolves `layouts/` and `assets/` here before the theme's, and these overrides exist:
 
 - [layouts/partials/extend_footer.html](layouts/partials/extend_footer.html) — the two client-side features PaperMod lacks: Mermaid rendering and click-to-zoom for images and diagrams. Both are handled by one IIFE:
   - Zoom uses a **single delegated `click` listener on `document`**, so it covers images that don't exist at load time (notably Mermaid's generated SVG). Don't replace this with per-element listeners bound on `DOMContentLoaded` — that's what forced the old fragile `setTimeout` race.
   - Mermaid is **lazy-loaded**: the script tag is only injected on pages that actually contain a `code.language-mermaid` block, because the bundled library is 3.3MB. The URL comes from `resources.Get` in the template, published to `/js/mermaid.min.js`. Theme (dark/default) is read from PaperMod's `pref-theme` localStorage key.
-- [layouts/partials/post_meta.html](layouts/partials/post_meta.html) — overrides PaperMod's byline to add word count alongside date/reading time/author.
+- [layouts/partials/post_meta.html](layouts/partials/post_meta.html) — overrides PaperMod's byline to add word count alongside date/reading time/author, plus a blue topic pill: "Series · Part N/M" for posts in a series, otherwise the first tag. It's a `<span>`, not a link, because list cards are covered by PaperMod's full-card `a.entry-link` overlay.
+- [layouts/partials/home_info.html](layouts/partials/home_info.html) — the home hero (avatar, eyebrow, CTA buttons, "Latest writing" label), driven by `homeInfoParams` in hugo.yaml.
+- [layouts/shortcodes/series.html](layouts/shortcodes/series.html) — `{{< series >}}` renders the part list for a post's `series` term, ordered by date. The `series` taxonomy is enabled in hugo.yaml; PaperMod also emits `og:see_also` for series siblings. To add a series, set `series: [Name]` on each part and drop `{{< series >}}` into the body. Same-date parts need distinct times (e.g. `T12:00:00Z`) to order correctly.
 
 Analytics were deliberately removed (`119ebcb`, `943c40a`); the dead GoatCounter partial and the `historic_views` front-matter key it read are now gone too. Leave analytics off unless asked. The built site currently makes **zero third-party requests** — no CDN, no web fonts, no trackers. Keep it that way: vendor anything new into `assets/` or `static/`.
 
@@ -43,7 +45,7 @@ Analytics were deliberately removed (`119ebcb`, `943c40a`); the dead GoatCounter
 
 Three rules when editing it:
 
-- Build on PaperMod's variables (`--entry`, `--border`, `--primary`, `--secondary`, `--content`, `--code-bg`, `--radius`) instead of hard-coded colors, so both themes track automatically. The one addition is `--accent` / `--accent-soft`, defined once per theme at the top of the file — **change those two values to restyle the site's accent everywhere.**
+- Build on PaperMod's variables (`--entry`, `--border`, `--primary`, `--secondary`, `--content`, `--code-bg`, `--radius`) instead of hard-coded colors, so both themes track automatically. The one addition is `--accent` / `--accent-soft`, defined once per theme at the top of the file — **change those two values to restyle the site's accent everywhere.** The dark block also replaces PaperMod's grey dark palette with a navy one; tune dark colours there.
 - Dark-mode overrides must use `:root[data-theme="dark"]`, the same selector PaperMod's own variables use. A `.dark` class selector silently does nothing.
 - Keep new hover/transform effects inside the `@media (prefers-reduced-motion: reduce)` guard at the bottom, which disables them.
 
