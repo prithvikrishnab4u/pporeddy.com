@@ -1,0 +1,26 @@
+{{- /* Series navigation box. Put {{< series >}} in a post that sets
+     `series: ["Name"]`; parts are ordered by date and the "(Part N of M)"
+     suffix is dropped from titles to keep the list compact. */ -}}
+{{- $page := .Page }}
+{{- with $page.GetTerms "series" }}
+{{- $term := index . 0 }}
+{{- $parts := $term.Pages.ByDate }}
+{{- $n := 0 }}
+{{- range $i, $p := $parts }}{{ if eq $p $page }}{{ $n = add $i 1 }}{{ end }}{{ end }}
+<nav class="series-box" aria-label="{{ $term.LinkTitle }} series">
+    <p class="series-label">
+        <a href="{{ $term.RelPermalink }}">{{ $term.LinkTitle }}</a>
+        {{- with $n }}<span class="series-count">Part {{ . }} of {{ len $parts }}</span>{{ end }}
+    </p>
+    <ol class="series-parts">
+        {{- range $parts }}
+        {{- $t := replaceRE `\s*\(Part \d+ of \d+\)\s*$` "" .Title }}
+        {{- if eq . $page }}
+        <li class="series-current" aria-current="page">{{ $t }}</li>
+        {{- else }}
+        <li><a href="{{ .RelPermalink }}">{{ $t }}</a></li>
+        {{- end }}
+        {{- end }}
+    </ol>
+</nav>
+{{- end }}

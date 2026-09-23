@@ -20,6 +20,8 @@ tags:
 categories:
   - Identity Security
   - Access Management
+series:
+  - CAEP Explained
 draft: false
 featured: false
 ShowReadingTime: true
@@ -227,11 +229,4 @@ The gap between authentication time and access reality has existed for decades. 
 
 ***
 
-## Series Navigation
-
-**CAEP Explained Series:**
-
-- [Part 1: Why Your Federated Sessions Are Broken](/posts/caep-explained-part-1/)
-- [Part 2: How CAEP Events Actually Work](/posts/caep-explained-part-2/)
-- [Part 3: Architecture Patterns and Policy Design](/posts/caep-explained-part-3/)
-- **Part 4: Zero Trust and AI Agents** (Current)
+{{< series >}}

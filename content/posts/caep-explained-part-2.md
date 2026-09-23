@@ -22,6 +22,8 @@ tags:
 categories:
   - Identity Security
   - Access Management
+series:
+  - CAEP Explained
 draft: false
 featured: false
 ShowReadingTime: true
@@ -260,11 +262,4 @@ Part 4 ties everything together: why CAEP is foundational for Zero Trust, and wh
 
 ***
 
-## Series Navigation
-
-**CAEP Explained Series:**
-
-- [Part 1: Why Your Federated Sessions Are Broken](/posts/caep-explained-part-1/)
-- **Part 2: How CAEP Events Actually Work** (Current)
-- [Part 3: Architecture Patterns and Policy Design](/posts/caep-explained-part-3/)
-- [Part 4: Zero Trust and AI Agents](/posts/caep-explained-part-4/)
+{{< series >}}

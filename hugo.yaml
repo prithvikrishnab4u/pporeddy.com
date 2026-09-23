@@ -98,6 +98,7 @@ menu:
 taxonomies:
   category: "categories"
   tag: "tags"
+  series: "series"
 
 minify:
   disableXML: true
