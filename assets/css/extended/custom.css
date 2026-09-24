@@ -630,6 +630,120 @@ mark {
     font-size: 0.82rem;
 }
 
+/* --- End of post: author box and related posts ------------------------- */
+
+/* Tag pills are mostly one-post pages; the topic pill and "Keep reading"
+   do their job. The tag pages still exist and are linked from search. */
+.post-footer .post-tags {
+    display: none;
+}
+
+.author-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-top: 3rem;
+    padding: 1.25rem 1.4rem;
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-inline-start: 3px solid var(--accent);
+    border-radius: var(--radius);
+}
+
+.author-avatar {
+    flex: none;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.author-text {
+    min-width: 0;
+}
+
+.author-text p {
+    margin: 0;
+}
+
+.author-name {
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.author-name a {
+    color: var(--accent);
+}
+
+.author-bio {
+    margin-top: 0.3rem !important;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: var(--secondary);
+}
+
+.author-box .social-icons {
+    padding: 0.5rem 0 0;
+}
+
+.related-posts {
+    margin-top: 2.2rem;
+}
+
+.related-posts h2 {
+    margin: 0 0 0.8rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--secondary);
+}
+
+.related-posts ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid var(--border);
+}
+
+.related-posts li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.related-posts li a {
+    display: block;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--primary);
+    transition: color 0.15s ease;
+}
+
+.related-posts li a:hover {
+    color: var(--accent);
+}
+
+.related-meta {
+    display: block;
+    margin-top: 0.2rem;
+    font-size: 0.82rem;
+    color: var(--secondary);
+}
+
+.related-more {
+    display: inline-block;
+    margin-top: 0.9rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--accent);
+}
+
+@media (max-width: 480px) {
+    .author-box {
+        flex-direction: column;
+    }
+}
+
 /* --- Motion preferences -------------------------------------------------- */
 
 @media (prefers-reduced-motion: reduce) {
@@ -641,6 +755,7 @@ mark {
     .search-result,
     .post-content a,
     .post-tags a,
+    .related-posts li a,
     #searchInput {
         transition: none;
     }

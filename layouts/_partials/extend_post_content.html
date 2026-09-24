@@ -1,0 +1,55 @@
+{{- /* Runs after the post body (PaperMod hook). Posts only: an author box and
+     up to three related posts. Bio, avatar and links come from
+     homeInfoParams / socialIcons in hugo.yaml, so the home hero and this box
+     stay in sync. Related ranking is configured under `related` in hugo.yaml
+     (topic first, then tags); other parts of the same series are skipped
+     because the series box already lists them. */ -}}
+{{- if and .IsPage (eq .Section "posts") }}
+{{- $page := . }}
+
+{{- with site.Params.homeInfoParams }}
+<aside class="author-box" aria-label="About the author">
+    {{- with .Avatar }}
+    <img class="author-avatar" src="{{ . | absURL }}" alt="" width="56" height="56" loading="lazy">
+    {{- end }}
+    <div class="author-text">
+        <p class="author-name">Written by <a href="{{ "about/" | relURL }}">{{ site.Params.author }}</a></p>
+        {{- with .Content }}
+        <p class="author-bio">{{ . | markdownify }}</p>
+        {{- end }}
+        {{ partial "social_icons.html" (dict "align" "left") }}
+    </div>
+</aside>
+{{- end }}
+
+{{- $siblings := slice }}
+{{- with $page.GetTerms "series" }}{{ $siblings = (index . 0).Pages }}{{ end }}
+{{- $related := slice }}
+{{- range site.RegularPages.Related $page }}
+{{- if and (eq .Section "posts") (not (in $siblings .)) (lt (len $related) 3) }}
+{{- $related = $related | append . }}
+{{- end }}
+{{- end }}
+
+{{- with $related }}
+<section class="related-posts" aria-labelledby="related-heading">
+    <h2 id="related-heading">Keep reading</h2>
+    <ul>
+        {{- range . }}
+        <li>
+            <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+            <span class="related-meta">
+                {{- with .Params.categories }}{{ index . 0 }} · {{ end }}{{ .Date | time.Format ":date_medium" }}
+            </span>
+        </li>
+        {{- end }}
+    </ul>
+    {{- with $page.GetTerms "categories" }}
+    {{- with index . 0 }}
+    <a class="related-more" href="{{ .Permalink }}">All posts on {{ .LinkTitle }} →</a>
+    {{- end }}
+    {{- end }}
+</section>
+{{- end }}
+
+{{- end }}

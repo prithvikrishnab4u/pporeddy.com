@@ -103,6 +103,17 @@ taxonomies:
   tag: "tags"
   series: "series"
 
+# "Keep reading" at the end of posts: same topic ranks highest, then shared tags.
+related:
+  includeNewer: true
+  threshold: 60
+  toLower: true
+  indices:
+    - name: categories
+      weight: 100
+    - name: tags
+      weight: 60
+
 minify:
   disableXML: true
   minifyOutput: true
