@@ -29,8 +29,7 @@ summary: From traditional IAM to cloud-native workloads and autonomous agents,
   the production architecture patterns that make identity the control plane
   across every identity type.
 categories:
-  - Identity Security
-  - Security Architecture
+  - AI Agents
 slug: beyond-iam-architecting-identity-for-workloads-and-ai-agents
 ---
 

@@ -18,8 +18,7 @@ tags:
   - Authentication
   - Security
 categories:
-  - Identity Security
-  - Identity and Access Management
+  - IAM Architecture
 draft: false
 featured: false
 ShowReadingTime: true

@@ -18,8 +18,7 @@ tags:
   - Offboarding
   - SCIM
 categories:
-  - Identity and Access Management
-  - Enterprise Security
+  - IAM Architecture
 draft: false
 featured: false
 ShowReadingTime: true

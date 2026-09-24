@@ -19,7 +19,6 @@ tags:
   - Compliance
 categories:
   - Identity Governance
-  - Security Design
 draft: false
 featured: false
 ShowReadingTime: true

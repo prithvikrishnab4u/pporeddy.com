@@ -6,7 +6,7 @@ date: 2026-03-05T00:00:00Z
 lastmod: 2026-04-10T00:00:00Z
 author: ["Prithvi Poreddy"]
 tags: ["Zero Trust", "SSF", "CAEP", "RISC", "SCIM", "Identity Security", "Continuous Access Evaluation", "Shared Signals", "IAM", "Session Security"]
-categories: ["Identity Security", "Zero Trust"]
+categories: ["Continuous Access"]
 draft: false
 featured: false
 ShowReadingTime: true

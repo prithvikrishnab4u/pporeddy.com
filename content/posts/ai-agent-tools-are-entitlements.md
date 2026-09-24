@@ -14,7 +14,7 @@ tags:
   - Authorization
   - Identity Governance
 categories:
-  - Identity Security
+  - AI Agents
 draft: false
 featured: false
 ShowReadingTime: true

@@ -19,8 +19,7 @@ tags:
   - OpenID
   - Continuous Access Evaluation
 categories:
-  - Identity Security
-  - Access Management
+  - Continuous Access
 series:
   - CAEP Explained
 draft: false

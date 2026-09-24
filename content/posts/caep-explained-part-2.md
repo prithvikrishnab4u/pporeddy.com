@@ -20,8 +20,7 @@ tags:
   - Audit Trail
   - Compliance
 categories:
-  - Identity Security
-  - Access Management
+  - Continuous Access
 series:
   - CAEP Explained
 draft: false

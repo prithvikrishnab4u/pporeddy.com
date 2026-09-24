@@ -20,8 +20,7 @@ tags:
   - Visibility
   - Zero Trust
 categories:
-  - Identity Security
-  - Security Architecture
+  - IAM Architecture
 draft: false
 featured: false
 ShowReadingTime: true

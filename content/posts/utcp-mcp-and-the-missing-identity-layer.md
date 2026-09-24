@@ -19,8 +19,7 @@ tags:
   - Identity
   - Zero Trust
 categories:
-  - AI Infrastructure
-  - Identity Security
+  - AI Agents
 draft: false
 featured: false
 ShowReadingTime: true

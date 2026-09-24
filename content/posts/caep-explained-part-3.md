@@ -20,8 +20,7 @@ tags:
   - Webhooks
   - Deployment
 categories:
-  - Identity Security
-  - Access Management
+  - Continuous Access
 series:
   - CAEP Explained
 draft: false

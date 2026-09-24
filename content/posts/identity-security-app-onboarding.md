@@ -16,8 +16,7 @@ tags:
   - Zero Trust
   - Application Onboarding
 categories:
-  - Identity Security
-  - IAM Architecture
+  - Identity Governance
 draft: false
 featured: false
 ShowReadingTime: true

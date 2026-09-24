@@ -16,8 +16,7 @@ tags:
   - Digital Principals
   - NHI
 categories:
-  - Identity Security
-  - AI Foundations
+  - AI Agents
 draft: false
 featured: false
 ShowReadingTime: true

@@ -6,7 +6,7 @@ date: 2026-01-05T00:00:00Z
 lastmod: 2026-01-23T00:00:00Z
 author: ["Prithvi Poreddy"]
 tags: ["Identity Security", "Build vs Buy", "IAM Strategy", "Risk Management", "Vendor Selection", "Engineering Decisions", "Security Architecture", "Technical Debt", "Compliance"]
-categories: ["Identity Security", "Strategy"]
+categories: ["IAM Architecture"]
 draft: false
 featured: false
 ShowReadingTime: true

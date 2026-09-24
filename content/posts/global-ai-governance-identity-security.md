@@ -15,8 +15,7 @@ tags:
   - Non-Human Identity
   - Compliance
 categories:
-  - Identity Security
-  - AI Governance
+  - AI Agents
 draft: false
 featured: false
 ShowReadingTime: true

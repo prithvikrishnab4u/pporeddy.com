@@ -18,8 +18,7 @@ tags:
   - Robinhood
   - ETF
 categories:
-  - Investing
-  - Personal Finance
+  - Other Writing
 draft: false
 featured: false
 ShowReadingTime: true

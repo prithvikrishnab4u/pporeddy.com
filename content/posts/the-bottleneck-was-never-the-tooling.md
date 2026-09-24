@@ -14,7 +14,7 @@ tags:
   - Self-Service
   - Provisioning
 categories:
-  - Identity and Access Management
+  - Identity Governance
 draft: false
 featured: false
 ShowReadingTime: true

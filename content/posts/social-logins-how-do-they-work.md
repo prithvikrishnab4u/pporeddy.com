@@ -17,8 +17,7 @@ tags:
   - Access Tokens
   - Security
 categories:
-  - Identity and Access Management
-  - Authentication
+  - IAM Architecture
 draft: false
 featured: false
 ShowReadingTime: true
