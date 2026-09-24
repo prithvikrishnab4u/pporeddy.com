@@ -65,10 +65,10 @@ This is stock PaperMod plus a small override layer. A file here with the same pa
 |---|---|
 | `hugo.yaml` | Site config: menu, home page hero text, taxonomies |
 | `assets/css/extended/custom.css` | **All visual styling** (colours, cards, typography, dark mode) |
-| `layouts/partials/home_info.html` | Home page hero (avatar, intro, buttons) |
-| `layouts/partials/post_meta.html` | Byline: date · read time · words · author, plus the topic pill |
-| `layouts/partials/extend_footer.html` | Mermaid diagrams (loaded only on pages that use them) and click-to-zoom |
-| `layouts/shortcodes/series.html` | The `{{< series >}}` box |
+| `layouts/_partials/home_info.html` | Home page hero (avatar, intro, buttons) |
+| `layouts/_partials/post_meta.html` | Byline: date · read time · words · author, plus the topic pill |
+| `layouts/_partials/extend_footer.html` | Mermaid diagrams (loaded only on pages that use them) and click-to-zoom |
+| `layouts/_shortcodes/series.html` | The `{{< series >}}` box |
 | `assets/js/fastsearch.js` | Search with de-duplicated results and keyword snippets (replaces the theme's) |
 | `archetypes/posts.md` | Template for `hugo new` |
 | `themes/PaperMod/` | The theme, as a git submodule. Don't edit it. Override instead. |
@@ -91,7 +91,7 @@ hugo --minify          # check for errors
 Then check two overrides against the theme's new versions:
 
 - `assets/js/fastsearch.js` vs `themes/PaperMod/assets/js/fastsearch.js`. If the theme changed its search page, ours may need the same change.
-- `layouts/partials/post_meta.html` and `home_info.html` vs the theme's copies in `themes/PaperMod/layouts/_partials/`.
+- `layouts/_partials/post_meta.html` and `home_info.html` vs the theme's copies in `themes/PaperMod/layouts/_partials/`.
 
 Test search, the home page, and a post in both light and dark mode before pushing.
 

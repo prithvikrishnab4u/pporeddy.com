@@ -14,10 +14,10 @@ Guidance for Claude Code in this repo. **Read [README.md](README.md) first.** It
 
 - **`assets/js/fastsearch.js`** replaces the theme's search script completely. The theme's search page ships its input `disabled`, and the script has to re-enable it. If our copy falls behind the theme's, search dies with no build error. Diff it against the theme's copy after any submodule bump.
 - **Search needs `JSON` in `outputs.home`** (hugo.yaml). Without it the index isn't generated.
-- **`layouts/partials/extend_footer.html`**: image zoom uses one delegated `click` listener on `document`, so it also covers Mermaid SVGs that render later. Don't switch to per-element listeners. Mermaid (3.3MB, vendored at `assets/js/mermaid.min.js`) loads only on pages containing `code.language-mermaid`.
-- **`layouts/partials/post_meta.html`**: the topic pill is a `<span>`, not a link, because PaperMod's `a.entry-link` overlay covers the whole card.
+- **`layouts/_partials/extend_footer.html`**: image zoom uses one delegated `click` listener on `document`, so it also covers Mermaid SVGs that render later. Don't switch to per-element listeners. Mermaid (3.3MB, vendored at `assets/js/mermaid.min.js`) loads only on pages containing `code.language-mermaid`.
+- **`layouts/_partials/post_meta.html`**: the topic pill is a `<span>`, not a link, because PaperMod's `a.entry-link` overlay covers the whole card.
 - **Don't add `extend_head.html` for favicons.** PaperMod already outputs them from `static/`.
-- Override folders use Hugo's legacy names (`layouts/partials/`, `layouts/shortcodes/`). They still override the theme's `_partials/` and `_shortcodes/`.
+- Override folders use Hugo's current names (`layouts/_partials/`, `layouts/_shortcodes/`), matching the theme. An override only takes effect if its path mirrors the theme file's.
 
 ## CSS (`assets/css/extended/custom.css`)
 
