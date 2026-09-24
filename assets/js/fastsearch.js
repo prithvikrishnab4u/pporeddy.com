@@ -1,201 +1,222 @@
+// Shadows themes/PaperMod/assets/js/fastsearch.js. Based on the theme's copy,
+// with two changes: results are de-duplicated by permalink, and each result
+// shows a keyword-context snippet instead of just the title.
+// Diff against the theme's copy after a submodule bump.
 import * as params from '@params';
 
-let fuse; // holds our search engine
-let resList = document.getElementById('searchResults');
-let sInput = document.getElementById('searchInput');
-let first, last, current_elem = null
-let resultsAvailable = false;
+const resList = document.getElementById('searchResults');
+const sInput = document.getElementById('searchInput');
+const searchBox = document.getElementById('searchbox');
 
-// load our search index
-window.onload = function () {
-    let xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4) {
-            if (xhr.status === 200) {
-                let data = JSON.parse(xhr.responseText);
-                if (data) {
-                    // fuse.js options; check fuse.js website for details
-                    let options = {
-                        distance: 100,
-                        threshold: 0.4,
-                        ignoreLocation: true,
-                        keys: [
-                            'title',
-                            'permalink',
-                            'summary',
-                            'content'
-                        ]
-                    };
-                    if (params.fuseOpts) {
-                        options = {
-                            isCaseSensitive: params.fuseOpts.iscasesensitive ?? false,
-                            includeScore: params.fuseOpts.includescore ?? false,
-                            includeMatches: params.fuseOpts.includematches ?? false,
-                            minMatchCharLength: params.fuseOpts.minmatchcharlength ?? 1,
-                            shouldSort: params.fuseOpts.shouldsort ?? true,
-                            findAllMatches: params.fuseOpts.findallmatches ?? false,
-                            keys: params.fuseOpts.keys ?? ['title', 'permalink', 'summary', 'content'],
-                            location: params.fuseOpts.location ?? 0,
-                            threshold: params.fuseOpts.threshold ?? 0.4,
-                            distance: params.fuseOpts.distance ?? 100,
-                            ignoreLocation: params.fuseOpts.ignorelocation ?? true
-                        }
-                    }
-                    fuse = new Fuse(data, options); // build the index from the json file
-                }
-            } else {
-                console.log(xhr.responseText);
-            }
-        }
+let fuse;
+let currentElement = null;
+let firstResult = null;
+let lastResult = null;
+
+const defaultFuseOptions = {
+    distance: 100,
+    threshold: 0.4,
+    ignoreLocation: true,
+    keys: ['title', 'permalink', 'summary', 'content']
+};
+
+const buildFuseOptions = () => {
+    if (!params.fuseOpts) {
+        return defaultFuseOptions;
+    }
+
+    return {
+        isCaseSensitive: params.fuseOpts.iscasesensitive ?? false,
+        includeScore: params.fuseOpts.includescore ?? false,
+        includeMatches: params.fuseOpts.includematches ?? false,
+        minMatchCharLength: params.fuseOpts.minmatchcharlength ?? 1,
+        shouldSort: params.fuseOpts.shouldsort ?? true,
+        findAllMatches: params.fuseOpts.findallmatches ?? false,
+        keys: params.fuseOpts.keys ?? defaultFuseOptions.keys,
+        location: params.fuseOpts.location ?? 0,
+        threshold: params.fuseOpts.threshold ?? defaultFuseOptions.threshold,
+        distance: params.fuseOpts.distance ?? defaultFuseOptions.distance,
+        ignoreLocation: params.fuseOpts.ignorelocation ?? defaultFuseOptions.ignoreLocation
     };
-    xhr.open('GET', "../index.json");
-    xhr.send();
-}
+};
 
-function activeToggle(ae) {
-    document.querySelectorAll('.focus').forEach(function (element) {
-        // rm focus class
-        element.classList.remove("focus")
-    });
-    if (ae) {
-        ae.focus()
-        document.activeElement = current_elem = ae;
-        ae.parentElement.classList.add("focus")
-    } else {
-        document.activeElement.parentElement.classList.add("focus")
-    }
-}
+const debounce = (fn, delay) => {
+    let timeout;
+    return (...args) => {
+        clearTimeout(timeout);
+        timeout = window.setTimeout(() => fn(...args), delay);
+    };
+};
 
-function reset() {
-    resultsAvailable = false;
-    resList.innerHTML = sInput.value = ''; // clear inputbox and searchResults
-    sInput.focus(); // shift focus to input box
-}
+const escapeRegExp = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
-// execute search as each character is typed
-sInput.onkeyup = function (e) {
-    // run a search query (for "term") every time a letter is typed
-    // in the search box
-    if (fuse) {
-        let results;
-        if (params.fuseOpts) {
-            results = fuse.search(this.value.trim(), { limit: params.fuseOpts.limit }); // the actual query being run using fuse.js along with options
-        } else {
-            results = fuse.search(this.value.trim()); // the actual query being run using fuse.js
-        }
+// The index holds HTML-entity-encoded text (&rsquo; etc.); decode it to plain
+// text first so escaping below doesn't double-encode. DOMParser runs no scripts.
+const decodeEntities = (s) =>
+    new DOMParser().parseFromString(s, 'text/html').documentElement.textContent;
 
+const escapeHTML = (s) => s.replace(/[&<>"']/g, (c) => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+}[c]));
 
-        if (results.length !== 0) {
-            // Track unique results by permalink
-            const seen = new Set();
-            let resultSet = "";
+// The sentence containing the query plus one on each side, with the query
+// highlighted. Falls back to the opening of the post.
+const buildSnippet = (content, query) => {
+    let snippet = content.substring(0, 180);
 
-            for (let i = 0; i < results.length; i++) {
-                const post = results[i].item;
+    if (query.length > 1 && content) {
+        const parts = content.split(/[\n.!?]/);
+        const wordMatch = new RegExp(`\\b${escapeRegExp(query)}\\b`, 'i');
+        const idx = parts.findIndex((p) => wordMatch.test(p));
 
-                // Skip duplicates
-                if (seen.has(post.permalink)) continue;
-                seen.add(post.permalink);
-
-                // Extract data
-                const title = post.title || "Untitled";
-                const permalink = post.permalink;
-                const content = post.summary || post.content || "";
-                const query = this.value.trim();
-
-                // --- Smarter snippet extraction: show exact matching line or nearby sentences ---
-                let snippet = "";
-                if (query.length > 1 && content) {
-                    // Split into lines or sentences to catch keyword context
-                    const parts = content.split(/[\n.!?]/);
-                    const found = parts.find(p => new RegExp(`\\b${query}\\b`, "i").test(p.trim()));
-
-                    if (found) {
-                        // Include a little context before and after if available
-                        const idx = parts.indexOf(found);
-                        const start = Math.max(0, idx - 1);
-                        const end = Math.min(parts.length, idx + 2);
-                        snippet = parts.slice(start, end).join(". ").trim() + " ...";
-                    } else {
-                        snippet = content.substring(0, 180) + " ...";
-                    }
-
-                    // Highlight query
-                    const highlight = new RegExp(`(${query})`, "gi");
-                    snippet = snippet.replace(highlight, "<mark>$1</mark>");
-                    // Clean excessive newlines and multiple spaces
-                    snippet = snippet.replace(/\n+/g, " ");   // remove line breaks
-                    snippet = snippet.replace(/\s{2,}/g, " "); // collapse extra spaces
-                } else {
-                    snippet = content.substring(0, 180) + " ...";
-                }
-
-                if (snippet.length > 300) {
-                    snippet = snippet.substring(0, 300) + " ...";
-                }
-                // Build HTML
-                resultSet += `
-      <li class="post-entry search-result">
-        <a href="${permalink}" class="result-title">${title}</a>
-        <p class="result-snippet">${snippet}</p>
-      </li>`;
-            }
-
-            resList.innerHTML = resultSet;
-            resultsAvailable = true;
-            first = resList.firstChild;
-            last = resList.lastChild;
-        } else {
-            resultsAvailable = false;
-            resList.innerHTML = '';
+        if (idx !== -1) {
+            snippet = parts.slice(Math.max(0, idx - 1), idx + 2).join('. ').trim();
         }
     }
-}
 
-sInput.addEventListener('search', function (e) {
-    // clicked on x
-    if (!this.value) reset()
-})
+    snippet = snippet.replace(/\s+/g, ' ').substring(0, 300) + ' ...';
+    snippet = escapeHTML(snippet);
 
-// kb bindings
-document.onkeydown = function (e) {
-    let key = e.key;
-    let ae = document.activeElement;
-
-    let inbox = document.getElementById("searchbox").contains(ae)
-
-    if (ae === sInput) {
-        let elements = document.getElementsByClassName('focus');
-        while (elements.length > 0) {
-            elements[0].classList.remove('focus');
-        }
-    } else if (current_elem) ae = current_elem;
-
-    if (key === "Escape") {
-        reset()
-    } else if (!resultsAvailable || !inbox) {
-        return
-    } else if (key === "ArrowDown") {
-        e.preventDefault();
-        if (ae == sInput) {
-            // if the currently focused element is the search input, focus the <a> of first <li>
-            activeToggle(resList.firstChild.lastChild);
-        } else if (ae.parentElement != last) {
-            // if the currently focused element's parent is last, do nothing
-            // otherwise select the next search result
-            activeToggle(ae.parentElement.nextSibling.lastChild);
-        }
-    } else if (key === "ArrowUp") {
-        e.preventDefault();
-        if (ae.parentElement == first) {
-            // if the currently focused element is first item, go to input box
-            activeToggle(sInput);
-        } else if (ae != sInput) {
-            // if the currently focused element is input box, do nothing
-            // otherwise select the previous search result
-            activeToggle(ae.parentElement.previousSibling.lastChild);
-        }
-    } else if (key === "ArrowRight") {
-        ae.click(); // click on active link
+    if (query.length > 1) {
+        const highlight = new RegExp(`(${escapeRegExp(escapeHTML(query))})`, 'gi');
+        snippet = snippet.replace(highlight, '<mark>$1</mark>');
     }
-}
+
+    return snippet;
+};
+
+const reset = () => {
+    currentElement = null;
+    firstResult = null;
+    lastResult = null;
+    resList.innerHTML = '';
+    sInput.value = '';
+    sInput.focus();
+};
+
+const setActiveResult = (element) => {
+    document.querySelectorAll('.focus').forEach((item) => item.classList.remove('focus'));
+
+    if (!element) {
+        return;
+    }
+
+    element.focus();
+    element.parentElement?.classList.add('focus');
+    currentElement = element;
+};
+
+const renderResults = (results, query) => {
+    if (!Array.isArray(results) || results.length === 0) {
+        resList.innerHTML = '';
+        firstResult = lastResult = currentElement = null;
+        return;
+    }
+
+    const seen = new Set();
+    let html = '';
+
+    for (const { item } of results) {
+        if (seen.has(item.permalink)) continue;
+        seen.add(item.permalink);
+
+        const title = escapeHTML(decodeEntities(item.title || 'Untitled'));
+        const snippet = buildSnippet(decodeEntities(item.summary || item.content || ''), query);
+
+        html += `<li class="post-entry search-result">`
+            + `<a href="${escapeHTML(item.permalink)}" class="result-title">${title}</a>`
+            + `<p class="result-snippet">${snippet}</p>`
+            + `</li>`;
+    }
+
+    resList.innerHTML = html;
+    firstResult = resList.firstElementChild;
+    lastResult = resList.lastElementChild;
+};
+
+const performSearch = () => {
+    if (!fuse) {
+        return;
+    }
+
+    const query = sInput.value.trim();
+    if (!query) {
+        renderResults([]);
+        return;
+    }
+
+    const searchOptions = params.fuseOpts?.limit ? { limit: params.fuseOpts.limit } : undefined;
+    const results = searchOptions ? fuse.search(query, searchOptions) : fuse.search(query);
+    renderResults(results, query);
+};
+
+const initSearch = async () => {
+    if (!sInput || !resList) {
+        return;
+    }
+
+    sInput.disabled = false;
+    sInput.focus();
+
+    try {
+        const response = await fetch('../index.json');
+        if (!response.ok) {
+            throw new Error(`Search index load failed: ${response.status}`);
+        }
+
+        const data = await response.json();
+        if (data) {
+            fuse = new Fuse(data, buildFuseOptions());
+            if (sInput.value.trim()) performSearch();
+        }
+    } catch (error) {
+        console.error(error);
+    }
+};
+
+window.addEventListener('load', initSearch);
+
+sInput?.addEventListener('input', debounce(performSearch, 150));
+
+sInput?.addEventListener('search', () => {
+    if (!sInput.value) {
+        reset();
+    }
+});
+
+document.addEventListener('keydown', (event) => {
+    const { key } = event;
+    const active = document.activeElement;
+    const isInSearchBox = searchBox?.contains(active);
+
+    if (key === 'Escape') {
+        reset();
+        return;
+    }
+
+    if (!firstResult || !isInSearchBox) {
+        return;
+    }
+
+    if (key === 'ArrowDown') {
+        event.preventDefault();
+
+        if (active === sInput) {
+            setActiveResult(firstResult.querySelector('.result-title'));
+        } else if (active?.parentElement !== lastResult) {
+            setActiveResult(active?.parentElement?.nextElementSibling?.querySelector('.result-title'));
+        }
+    } else if (key === 'ArrowUp') {
+        event.preventDefault();
+
+        if (active?.parentElement === firstResult) {
+            setActiveResult(sInput);
+        } else if (active !== sInput) {
+            setActiveResult(active?.parentElement?.previousElementSibling?.querySelector('.result-title'));
+        }
+    } else if (key === 'ArrowRight') {
+        if (active?.matches?.('.result-title')) {
+            active.click();
+        }
+    }
+});
