@@ -5,8 +5,10 @@ summary: ""      # blurb shown on the home page and /posts/
 date: {{ .Date | time.Format "2006-01-02" }}T00:00:00Z
 lastmod: {{ .Date | time.Format "2006-01-02" }}T00:00:00Z
 author: ["Prithvi Poreddy"]
-tags: []         # the first tag becomes the blue topic pill
-categories: ["Identity Security"]
+tags: []
+# One topic: Continuous Access, AI Agents, Identity Governance, IAM Architecture,
+# or Other Writing. It is shown as the blue pill. New topic? Add content/categories/<slug>/_index.md.
+categories: []
 slug: "{{ .File.ContentBaseName }}"  # the URL; never change it after publishing
 draft: true
 ShowShareButtons: true

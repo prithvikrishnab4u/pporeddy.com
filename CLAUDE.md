@@ -35,4 +35,5 @@ It loads automatically after the theme's CSS.
 - Dates are RFC3339 with an explicit time: `2026-01-01T00:00:00Z`.
 - `markup.goldmark.renderer.unsafe: true` is on, and posts depend on raw HTML.
 - Series order follows `date`, so same-day parts need different times.
+- Each post has exactly one `categories` entry, one of the topics in `content/categories/`. Don't invent new ones in front matter. A new topic needs its own `_index.md` with a description.
 - Site-level image params in hugo.yaml need the `/images/` prefix. A bare `/name.jpg` 404s in social cards.

@@ -38,13 +38,28 @@ hugo server -D                             # http://localhost:1313, drafts inclu
 | `title` / `description` / `summary` | Three different things: page title, SEO text, list-page blurb. Fill in all three. |
 | `slug` | **This is the URL.** Changing it after publishing breaks links. Renaming the file is safe. |
 | `date` | A future date hides the post until that day. |
-| `tags` | The first tag is shown as the blue pill on cards. |
+| `categories` | Exactly one **topic** (see below). It's shown as the blue pill on cards. |
+| `tags` | Free-form keywords. They get their own pages but aren't in the menu. |
 | `canonicalURL` | Set it if the post was first published on LinkedIn. |
 | `cover.image` | Path relative to `static/` with no leading slash (e.g. `images/foo.png`), plus `relative: true` and an `alt`. |
 
 **Images** go in `static/images/` and are referenced as `/images/foo.png` in the post body.
 
 **Diagrams:** a ```` ```mermaid ```` code block renders as a diagram. Images and diagrams zoom on click.
+
+### Topics
+
+Every post has one topic, set in `categories`. The Topics page lists them with a short description:
+
+| Topic | For |
+|---|---|
+| Continuous Access | SSF, CAEP, RISC, Zero Trust in practice |
+| AI Agents | Identity and governance for agents, MCP, non-human identity |
+| Identity Governance | Access reviews, provisioning, onboarding |
+| IAM Architecture | Identifiers, authentication, tooling, strategy |
+| Other Writing | Anything outside identity security |
+
+To add a topic, create `content/categories/<slug>/_index.md` with a `title` and `description`. Old category URLs are redirected with `aliases` in those files, so keep them when renaming a topic.
 
 ### Series
 
@@ -63,12 +78,13 @@ This is stock PaperMod plus a small override layer. A file here with the same pa
 
 | File | Purpose |
 |---|---|
-| `hugo.yaml` | Site config: menu, home page hero text, taxonomies |
+| `hugo.yaml` | Site config: menu (About · Posts · Topics · search icon), home page hero text, taxonomies |
 | `assets/css/extended/custom.css` | **All visual styling** (colours, cards, typography, dark mode) |
 | `layouts/_partials/home_info.html` | Home page hero (avatar, intro, buttons) |
 | `layouts/_partials/post_meta.html` | Byline: date · read time · words · author, plus the topic pill |
 | `layouts/_partials/extend_footer.html` | Mermaid diagrams (loaded only on pages that use them) and click-to-zoom |
 | `layouts/_shortcodes/series.html` | The `{{< series >}}` box |
+| `layouts/categories/taxonomy.html` | The Topics page (cards with descriptions) |
 | `assets/js/fastsearch.js` | Search with de-duplicated results and keyword snippets (replaces the theme's) |
 | `archetypes/posts.md` | Template for `hugo new` |
 | `themes/PaperMod/` | The theme, as a git submodule. Don't edit it. Override instead. |
