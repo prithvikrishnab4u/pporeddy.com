@@ -22,15 +22,17 @@ site.Params.DateFormat)))) }}
 {{- end }}
 
 {{- /* Topic pill: series and part number when the post is in a series,
-     otherwise the first tag (more specific than the category, which is
-     "Identity Security" on most posts). A span, not a link: list cards are
-     covered by PaperMod's full-card a.entry-link overlay. */ -}}
+     otherwise the post's topic (its category), falling back to the first
+     tag. A span, not a link: list cards are covered by PaperMod's full-card
+     a.entry-link overlay. */ -}}
 {{- $page := . }}
 {{- with $page.GetTerms "series" }}
 {{- $parts := (index . 0).Pages.ByDate }}
 {{- $n := 0 }}
 {{- range $i, $p := $parts }}{{ if eq $p $page }}{{ $n = add $i 1 }}{{ end }}{{ end }}
 <span class="entry-topic">{{ (index . 0).LinkTitle }}{{ with $n }} · Part {{ . }}/{{ len $parts }}{{ end }}</span>
+{{- else with $page.Params.categories }}
+<span class="entry-topic">{{ index . 0 }}</span>
 {{- else }}
 {{- with $page.Params.tags }}
 <span class="entry-topic">{{ index . 0 }}</span>

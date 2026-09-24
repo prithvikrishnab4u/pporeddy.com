@@ -1,0 +1,28 @@
+{{- /* Topics page (/categories/): one card per topic with its description,
+     instead of the theme's bare pill list. Descriptions come from
+     content/categories/<topic>/_index.md. */ -}}
+{{- define "main" }}
+
+<header class="page-header">
+    <h1>{{ .Title }}</h1>
+    {{- with .Description }}
+    <div class="post-description">{{ . }}</div>
+    {{- end }}
+</header>
+
+{{- range .Data.Terms.ByCount }}
+{{- with .Page }}
+<article class="post-entry topic-entry">
+    <header class="entry-header">
+        <h2 class="entry-hint-parent">{{ .LinkTitle }}</h2>
+    </header>
+    {{- with .Description }}
+    <div class="entry-content"><p>{{ . }}</p></div>
+    {{- end }}
+    <footer class="entry-footer">{{ len .Pages }} {{ cond (eq (len .Pages) 1) "post" "posts" }}</footer>
+    <a class="entry-link" aria-label="{{ .LinkTitle }}" href="{{ .Permalink }}"></a>
+</article>
+{{- end }}
+{{- end }}
+
+{{- end }}{{/* end main */ -}}
