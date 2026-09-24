@@ -85,6 +85,8 @@ This is stock PaperMod plus a small override layer. A file here with the same pa
 | `layouts/_partials/extend_footer.html` | Mermaid diagrams (loaded only on pages that use them) and click-to-zoom |
 | `layouts/_shortcodes/series.html` | The `{{< series >}}` box |
 | `layouts/categories/taxonomy.html` | The Topics page (cards with descriptions) |
+| `layouts/_shortcodes/topics.html` | `{{< topics >}}`: the topic pill row at the top of the Posts page |
+| `layouts/_partials/extend_post_content.html` | End of every post: author box (from `homeInfoParams`) and "Keep reading" (ranked by `related` in `hugo.yaml`) |
 | `assets/js/fastsearch.js` | Search with de-duplicated results and keyword snippets (replaces the theme's) |
 | `archetypes/posts.md` | Template for `hugo new` |
 | `themes/PaperMod/` | The theme, as a git submodule. Don't edit it. Override instead. |

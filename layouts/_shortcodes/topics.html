@@ -1,0 +1,8 @@
+{{- /* {{< topics >}}: a row of topic pills linking to each topic page,
+     largest first. Used at the top of the Posts page. */ -}}
+<nav class="topic-filter" aria-label="Browse by topic">
+    <span class="topic-filter-label">Browse by topic</span>
+    {{- range site.Taxonomies.categories.ByCount }}
+    <a href="{{ .Page.Permalink }}">{{ .Page.LinkTitle }} <span class="topic-count">{{ .Count }}</span></a>
+    {{- end }}
+</nav>
