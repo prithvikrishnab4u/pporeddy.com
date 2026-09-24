@@ -23,6 +23,9 @@ params:
   defaultTheme: auto # auto switches between light/dark based on system
   ShowReadingTime: true
   ShowBreadCrumbs: false
+  # Site-level since the PaperMod bump; the per-post flag alone no longer shows them.
+  ShowShareButtons: true
+  ShareButtons: ["linkedin", "x"]
   ShowPostNavLinks: true
   ShowCodeCopyButtons: true
   ShowWordCount: true
