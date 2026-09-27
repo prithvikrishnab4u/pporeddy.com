@@ -21,6 +21,7 @@ categories:
   - Other Writing
 draft: false
 featured: false
+hiddenInHomeList: true
 ShowReadingTime: true
 ShowShareButtons: true
 canonicalURL: https://medium.com/@pporeddy/robinhood-introduced-drip-recurring-and-fractional-investing-everything-you-need-to-know-b78b89e579c9
