@@ -51,6 +51,8 @@ Identity architecture, identity governance (IGA), privileged access, and non-hum
 
 ## Outside work
 
-I'm a U.S. Army Reserve veteran and hold an MS in Computer Science (Information Security) from LSU New Orleans. Away from the keyboard you'll find me on a pickleball court or around a tabletop board game.
+Most weekends you'll find me on a pickleball court, or around a table with friends and a long tabletop board game. I also like meeting identity people in person, which is why I help run IdentiBeer DFW. If you're in the area, come say hi.
 
-If you want to talk identity, [reach out on LinkedIn](https://linkedin.com/in/pporeddy).
+A couple of other things about me: I'm a U.S. Army Reserve veteran, and I studied computer science and information security at LSU New Orleans.
+
+If you want to talk identity, or just swap board game recommendations, [reach out on LinkedIn](https://linkedin.com/in/pporeddy).
