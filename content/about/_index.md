@@ -36,7 +36,7 @@ A growing part of the work is AI agents. They need identities, owners and tightl
 
 ## Speaking and community
 
-- **Identiverse 2026:** [Identity Security Moves at the Speed of App Onboarding](https://identiverse.com/idv26/agenda/)
+- **Identiverse 2026, Las Vegas:** Spoke on [Identity Security Moves at the Speed of App Onboarding](https://identiverse.com/idv26/agenda/)
 - **InfoSec World 2026:** [The Authorization Gap: When Every API Call is Valid but the Outcome Isn't](https://www.infosecworldusa.com/isw26/agenda/). How to authorize behavior, not just access, when an AI agent can do real damage with a valid OAuth token and approved scopes.
 - Contributor to the **IDPro Body of Knowledge** and to **Cloud Security Alliance** working groups on MCP security and identity
 - Organizer of **IdentiBeer DFW**, the first Dallas–Fort Worth chapter of the identity community meetup
