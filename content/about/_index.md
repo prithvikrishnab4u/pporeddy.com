@@ -22,17 +22,13 @@ Hi, I'm **Prithvi**. I've worked in identity and access management for about 14 
 
 ## What I do now
 
-I lead IAM at **Triumph Financial (TBK Bank)**, reporting to the CISO. I joined in April 2026 as the bank's first dedicated IAM hire, so the job is building the practice: setting the multi-year IAM roadmap, deciding how we govern access across nine service lines and 470 applications, and getting business, Infrastructure, HR and GRC teams to agree on one access standard.
+I lead Identity and Access Management at **Triumph Financial**. I came in to build the IAM practice from the ground up: setting the direction, choosing the right platforms, and getting teams across the bank to agree on how access should work.
 
-A growing part of the work is AI agents. They need identities, owners and tightly scoped access, just like people do. I own how we govern those non-human identities.
+More and more of that work is about AI agents. They need identities, owners and limited access, just like people do. Working out how to govern them well is one of the most interesting problems in identity right now.
 
 ## Where I've been
 
-- **Meta** (2020–2025). Managed a 20-person workforce identity organization serving 80,000 employees and 250,000 contractors. Built CASP, a runtime attribute-based authorization platform for PII and location-based access, and scaled role-based access to 1,200 roles.
-- **Lime** (2019–2020). Head of Information Security, covering IAM, vendor risk, asset management, and SOX and PCI audits.
-- **Ancestry** (2018–2019). First dedicated IAM hire. Founded the IAM product function.
-- **Deloitte** (2015–2018). Delivered IAM programs for state, federal and healthcare clients.
-- **World Bank** (2012–2015). Built IAM onboarding, certification and governance modules, and ran SOX certifications.
+Before Triumph, I spent five years leading workforce identity at **Meta**, which taught me what access management looks like at a very large scale. Before that, I ran information security at **Lime**, built the IAM function at **Ancestry**, and started out in IAM consulting and governance at **Deloitte** and the **World Bank**.
 
 ## Speaking
 
