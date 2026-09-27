@@ -34,11 +34,19 @@ A growing part of the work is AI agents. They need identities, owners and tightl
 - **Deloitte** (2015–2018). Delivered IAM programs for state, federal and healthcare clients.
 - **World Bank** (2012–2015). Built IAM onboarding, certification and governance modules, and ran SOX certifications.
 
-## Speaking and community
+## Speaking
 
-- **Identiverse 2026, Las Vegas:** Spoke on [Identity Security Moves at the Speed of App Onboarding](https://identiverse.com/idv26/agenda/)
-- **InfoSec World 2026:** [The Authorization Gap: When Every API Call is Valid but the Outcome Isn't](https://www.infosecworldusa.com/isw26/agenda/). How to authorize behavior, not just access, when an AI agent can do real damage with a valid OAuth token and approved scopes.
-- Contributor to the **IDPro Body of Knowledge** and to **Cloud Security Alliance** working groups on MCP security and identity
+- **Identiverse 2026, Las Vegas:** [Identity Security Moves at the Speed of App Onboarding](https://identiverse.com/idv26/session/?idvid=3931766). Why app onboarding is the slowest lane in IAM, and how to get baseline security in place first. I also [wrote it up as a post](/posts/identity-security-app-onboarding/).
+- **InfoSec World 2026:** [The Authorization Gap: When Every API Call is Valid but the Outcome Isn't](https://www.infosecworldusa.com/isw26/agenda/). How to authorize behavior, not just access, when AI agents chain valid API calls into outcomes nobody intended.
+
+## Published elsewhere
+
+- **IDPro Body of Knowledge:** [Non-Human Identity Management: Designing and Governing Machine Actors](https://bok.idpro.org/article/id/133/) (December 2025). A framework for managing machine identities across lifecycle, authentication, authorization and observability.
+- **IDPro newsletter:** [Machine Identity at Scale: Why Traditional IAM Can't Keep Up](https://idpro.org/machine-identity-at-scale-why-traditional-iam-cant-keep-up/) (January 2026)
+
+## Community
+
+- Contributor to **Cloud Security Alliance** working groups on MCP security and identity
 - Organizer of **IdentiBeer DFW**, the first Dallas–Fort Worth chapter of the identity community meetup
 
 ## What I write about
