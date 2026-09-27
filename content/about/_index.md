@@ -51,8 +51,6 @@ Identity architecture, identity governance (IGA), privileged access, and non-hum
 
 ## Outside work
 
-Most weekends you'll find me on a pickleball court, or around a table with friends and a long tabletop board game. I also like meeting identity people in person, which is why I help run IdentiBeer DFW. If you're in the area, come say hi.
+Away from work, I play racquet sports and I'm slowly working my way through the national parks. I also like meeting identity people in person, which is why I help run IdentiBeer DFW. If you're in the area, come say hi.
 
-A couple of other things about me: I'm a U.S. Army Reserve veteran, and I studied computer science and information security at LSU New Orleans.
-
-If you want to talk identity, or just swap board game recommendations, [reach out on LinkedIn](https://linkedin.com/in/pporeddy).
+If you want to talk identity, or trade national park recommendations, [reach out on LinkedIn](https://linkedin.com/in/pporeddy).
