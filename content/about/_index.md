@@ -37,7 +37,7 @@ A growing part of the work is AI agents. They need identities, owners and tightl
 ## Speaking
 
 - **Identiverse 2026, Las Vegas:** [Identity Security Moves at the Speed of App Onboarding](https://identiverse.com/idv26/session/?idvid=3931766). Why app onboarding is the slowest lane in IAM, and how to get baseline security in place first. I also [wrote it up as a post](/posts/identity-security-app-onboarding/).
-- **InfoSec World 2026:** [The Authorization Gap: When Every API Call is Valid but the Outcome Isn't](https://www.infosecworldusa.com/isw26/agenda/). How to authorize behavior, not just access, when AI agents chain valid API calls into outcomes nobody intended.
+- **InfoSec World 2026, Orlando (October, Financial Services track):** [The Authorization Gap: When Every API Call is Valid but the Outcome Isn't](https://www.infosecworldusa.com/isw26/financial-services/). How to authorize behavior, not just access, when AI agents chain valid API calls into outcomes nobody intended.
 
 ## Published elsewhere
 
