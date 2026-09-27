@@ -41,7 +41,7 @@ A growing part of the work is AI agents. They need identities, owners and tightl
 
 ## Published elsewhere
 
-- **IDPro Body of Knowledge:** [Non-Human Identity Management: Designing and Governing Machine Actors](https://bok.idpro.org/article/id/133/) (December 2025). A framework for managing machine identities across lifecycle, authentication, authorization and observability.
+- **IDPro Body of Knowledge:** [Non-Human Identity Management: Designing and Governing Machine Actors](https://bok.idpro.org/article/id/133/) (Issue 17(1), December 2025). A framework for managing machine identities across lifecycle, authentication, authorization and observability.
 - **IDPro newsletter:** [Machine Identity at Scale: Why Traditional IAM Can't Keep Up](https://idpro.org/machine-identity-at-scale-why-traditional-iam-cant-keep-up/) (January 2026)
 
 ## Community
