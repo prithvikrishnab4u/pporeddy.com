@@ -66,7 +66,7 @@ params:
       - name: "About me"
         url: "/about/"
     Content: >
-      Product leader in Identity Security & AI Governance, building trustworthy systems for humans & machines while sharing insights on technology, risk, and design.
+      Identity security leader who builds IAM programs for people and AI agents. I write about identity architecture, IGA and non-human identity.
 
   # Social Icons (show below intro)
   socialIcons:
