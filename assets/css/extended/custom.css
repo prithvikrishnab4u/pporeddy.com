@@ -790,6 +790,12 @@ mark {
 
 /* --- About page intro (content/about/_index.md) ------------------------- */
 
+/* The intro card already says what the description says; keep the
+   description for search engines, hide it on the page. */
+.page-header:has(+ .post-content .about-intro) .post-description {
+    display: none;
+}
+
 .post-content .about-intro {
     display: flex;
     align-items: center;
