@@ -18,7 +18,7 @@ outputs:
 params:
   env: production
   title: "Prithvi Poreddy"
-  description: "Identity Security | Product Leader | Identity & Access Management | AI Security Strategy"
+  description: "Prithvi Poreddy writes about identity security, IAM, IGA and non-human identity."
   author: "Prithvi Poreddy"
   defaultTheme: auto # auto switches between light/dark based on system
   ShowReadingTime: true
@@ -47,7 +47,7 @@ params:
     type: website
     image: "/images/my-profile-pic.jpg"
     title: "Prithvi Poreddy — Identity Security & AI Governance"
-    description: "Product leader building trustworthy systems for humans and machines."
+    description: "An identity security leader writing about IAM programs for people and AI agents."
 
   twitterCards:
     card: summary_large_image
