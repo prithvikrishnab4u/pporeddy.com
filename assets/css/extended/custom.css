@@ -817,6 +817,12 @@ mark {
     object-fit: cover;
 }
 
+/* Black and white in light mode to match the home avatar; colour in dark
+   mode, where the warm background stands out better against navy. */
+:root:not([data-theme="dark"]) .post-content .about-photo {
+    filter: grayscale(1);
+}
+
 .post-content .about-card p {
     margin: 0;
     line-height: 1.5;
