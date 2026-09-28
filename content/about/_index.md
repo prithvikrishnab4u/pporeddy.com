@@ -22,9 +22,7 @@ Hi, I'm **Prithvi**. I've worked in identity and access management for about 14 
 
 ## What I do now
 
-I lead Identity and Access Management at **Triumph Financial**. I came in to build the IAM practice from the ground up: setting the direction, choosing the right platforms, and getting teams across the bank to agree on how access should work.
-
-More and more of that work is about AI agents. They need identities, owners and limited access, just like people do. Working out how to govern them well is one of the most interesting problems in identity right now.
+I lead Identity and Access Management at **Triumph Financial**, where I'm building the IAM practice from the ground up.
 
 ## Where I've been
 
